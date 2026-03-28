@@ -286,7 +286,7 @@ async function init() {
   h += `<div class="hour-annotation">`;
   h += `Peak at <strong>${fmtH(c.peakHour)} CT</strong>.`;
   if (c.nightConvos > 0) {
-    h += ` ${c.nightConvos} after 10pm.`;
+    h += ` ${c.nightConvos} late-night session${c.nightConvos>1?'s':''} after 10pm.`;
   }
   h += `</div></div></div>`;
 
