@@ -10,367 +10,287 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: #e8e8f0; min-height: 100vh; overflow-x: hidden; }
 
-/* Hero */
-.hero { padding: 40px 20px 20px; text-align: center; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(ellipse, rgba(68,170,255,0.08) 0%, rgba(167,139,250,0.04) 40%, transparent 70%); pointer-events: none; }
-.hero h1 { font-size: 15px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 8px; position: relative; }
-.hero-number { font-size: 72px; font-weight: 900; line-height: 1; background: linear-gradient(135deg, #4af 10%, #a78bfa 50%, #fb7185 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; }
-.hero-label { font-size: 16px; color: rgba(255,255,255,0.4); margin-top: 4px; position: relative; }
-.hero-sub { font-size: 12px; color: rgba(255,255,255,0.2); margin-top: 16px; position: relative; }
+.hero { padding: 48px 20px 12px; text-align: center; position: relative; }
+.hero::before { content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 500px; height: 350px; background: radial-gradient(ellipse, rgba(68,170,255,0.07) 0%, transparent 70%); pointer-events: none; }
+.hero-week { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.25); position: relative; }
+.hero-number { font-size: 80px; font-weight: 900; line-height: 1; background: linear-gradient(135deg, #4af 10%, #a78bfa 50%, #fb7185 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; }
+.hero-label { font-size: 18px; color: rgba(255,255,255,0.4); margin-top: 2px; position: relative; }
 
-.wrap { max-width: 640px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 600px; margin: 0 auto; padding: 0 16px; }
 
-/* Radar / theme wheel — the hero viz */
-.radar { margin: 20px auto 32px; position: relative; }
-.radar canvas { display: block; margin: 0 auto; }
+/* Theme donut */
+.donut-wrap { display: flex; align-items: center; justify-content: center; gap: 24px; margin: 28px 0; }
+.donut-legend { display: flex; flex-direction: column; gap: 6px; }
+.donut-item { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.donut-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.donut-count { color: rgba(255,255,255,0.3); margin-left: 4px; }
 
-/* Insight — big visual cards */
-.card { margin-bottom: 20px; border-radius: 16px; overflow: hidden; position: relative; }
+/* Cards */
+.card { margin-bottom: 16px; border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.05); }
+.card-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.2); padding: 18px 20px 0; }
 
-/* Split card */
-.split { display: flex; min-height: 140px; }
-.split-side { flex: 1; padding: 24px 20px; display: flex; flex-direction: column; justify-content: center; }
-.split-left { background: linear-gradient(135deg, rgba(68,170,255,0.08), rgba(68,170,255,0.02)); border-right: 1px solid rgba(255,255,255,0.04); }
-.split-right { background: linear-gradient(135deg, rgba(251,113,133,0.08), rgba(251,113,133,0.02)); }
-.split-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 8px; }
-.split-title { font-size: 20px; font-weight: 800; line-height: 1.2; margin-bottom: 4px; }
-.split-items { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+/* Hour chart */
+.hours-bar { display: flex; height: 56px; gap: 1px; align-items: flex-end; padding: 0 20px; }
+.hours-bar .col { flex: 1; border-radius: 2px 2px 0 0; min-width: 0; cursor: default; }
+.hours-labels { display: flex; padding: 4px 20px 14px; font-size: 9px; color: rgba(255,255,255,0.12); }
+.hours-labels span { flex: 1; text-align: center; }
+.hours-insight { text-align: center; padding: 0 20px 16px; font-size: 13px; color: rgba(255,255,255,0.35); }
 
-/* Stat card */
-.stat-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 24px; border-radius: 16px; margin-bottom: 16px; }
-.stat-card-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 14px; }
+/* Day dots */
+.day-row { display: flex; gap: 6px; justify-content: center; padding: 16px 20px; }
+.day-col { text-align: center; flex: 1; }
+.day-label { font-size: 10px; color: rgba(255,255,255,0.2); margin-bottom: 6px; }
+.day-val { font-size: 22px; font-weight: 800; }
+.day-bar { height: 4px; border-radius: 2px; margin-top: 6px; }
 
-/* Contrast card — the LinkedIn vs Reality insight */
-.contrast { background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.05); }
-.contrast-row { display: flex; align-items: stretch; }
-.contrast-col { flex: 1; padding: 20px; }
-.contrast-col:first-child { border-right: 1px solid rgba(255,255,255,0.04); }
-.contrast-emoji { font-size: 28px; margin-bottom: 8px; }
-.contrast-heading { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
-.contrast-heading.gray { color: rgba(255,255,255,0.25); }
-.contrast-heading.bright { color: #4af; }
-.contrast-list { list-style: none; font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.8; }
-.contrast-list li::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 8px; vertical-align: middle; }
-.contrast-list.linked li::before { background: rgba(255,255,255,0.15); }
-.contrast-list.real li::before { background: #4af; }
+/* Contrast */
+.contrast { display: flex; }
+.contrast-side { flex: 1; padding: 18px 16px; }
+.contrast-side:first-child { border-right: 1px solid rgba(255,255,255,0.04); }
+.contrast-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+.contrast-items { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.5); }
+.contrast-items strong { color: rgba(255,255,255,0.75); font-weight: 600; }
 
-/* Callout — single insight with punch */
-.callout { background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.05); padding: 28px 24px; text-align: center; }
-.callout-number { font-size: 48px; font-weight: 900; line-height: 1; }
-.callout-text { font-size: 15px; color: rgba(255,255,255,0.55); margin-top: 8px; line-height: 1.5; max-width: 400px; margin-left: auto; margin-right: auto; }
-.callout-detail { font-size: 12px; color: rgba(255,255,255,0.25); margin-top: 12px; }
+/* Topic flow */
+.topics-flow { padding: 12px 20px 18px; display: flex; flex-wrap: wrap; gap: 5px; }
+.topic-pill { padding: 4px 11px; border-radius: 8px; font-size: 12px; line-height: 1.3; border: 1px solid rgba(255,255,255,0.05); }
 
-/* Hour timeline */
-.timeline-bar { display: flex; height: 48px; gap: 2px; align-items: flex-end; margin-bottom: 4px; }
-.timeline-bar .col { flex: 1; border-radius: 3px 3px 0 0; min-width: 0; transition: height 0.3s; position: relative; }
-.timeline-bar .col:hover::after { content: attr(data-tip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); font-size: 10px; color: #fff; background: rgba(0,0,0,0.8); padding: 2px 6px; border-radius: 4px; white-space: nowrap; pointer-events: none; }
-.timeline-labels { display: flex; font-size: 10px; color: rgba(255,255,255,0.15); }
-.timeline-labels span { flex: 1; text-align: center; }
+/* Timeline */
+.tl { padding: 4px 20px 16px; }
+.tl-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.tl-item:last-child { border: none; }
+.tl-title { font-size: 13px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 12px; }
+.tl-meta { font-size: 11px; color: rgba(255,255,255,0.2); white-space: nowrap; }
 
-/* Music split */
-.music-split { display: flex; gap: 0; }
-.music-side { flex: 1; padding: 22px 18px; min-height: 160px; }
-.music-left { background: linear-gradient(135deg, rgba(68,170,255,0.06), rgba(129,140,248,0.03)); border-radius: 16px 0 0 16px; }
-.music-right { background: linear-gradient(135deg, rgba(251,113,133,0.06), rgba(244,114,182,0.03)); border-radius: 0 16px 16px 0; }
-.music-genre { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-.music-left .music-genre { color: rgba(68,170,255,0.5); }
-.music-right .music-genre { color: rgba(251,113,133,0.5); }
-.music-artist { font-size: 14px; font-weight: 600; margin-bottom: 4px; color: rgba(255,255,255,0.7); }
-.music-count { font-size: 11px; color: rgba(255,255,255,0.25); }
-.music-vs { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.2); background: var(--bg); padding: 4px 8px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); z-index: 1; }
+/* GitHub */
+.repo-row { display: flex; align-items: center; gap: 10px; padding: 10px 20px; }
+.repo-row:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.03); }
+.repo-name { font-size: 14px; font-weight: 600; color: #4ade80; }
+.repo-desc { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 2px; }
+.repo-lang { font-size: 11px; color: rgba(255,255,255,0.25); margin-left: auto; white-space: nowrap; }
 
-/* Dots row */
-.dots { display: flex; gap: 6px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
-.dot { width: 10px; height: 10px; border-radius: 50%; }
+/* Callout */
+.callout { text-align: center; padding: 24px 20px; }
+.callout-big { font-size: 44px; font-weight: 900; line-height: 1; }
+.callout-text { font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 6px; line-height: 1.5; }
 
-/* Footer */
-.footer { text-align: center; padding: 40px 20px; font-size: 11px; color: rgba(255,255,255,0.12); }
+/* Models */
+.model-row { display: flex; gap: 8px; padding: 12px 20px 16px; flex-wrap: wrap; }
+.model-chip { padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+
+.footer { text-align: center; padding: 32px 20px 48px; font-size: 11px; color: rgba(255,255,255,0.1); }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <h1>Tim Nunamaker's Week</h1>
+  <div class="hero-week" id="hero-week">loading...</div>
   <div class="hero-number" id="hero-num">—</div>
-  <div class="hero-label" id="hero-label">loading...</div>
-  <div class="hero-sub" id="hero-sub"></div>
+  <div class="hero-label" id="hero-label"></div>
 </div>
 
-<div class="wrap" id="out"><div style="text-align:center;color:rgba(255,255,255,0.2);padding:40px">Loading data...</div></div>
-
+<div class="wrap" id="out"></div>
 <div class="footer" id="footer"></div>
 
 <script>
 async function init() {
-  const res = await fetch('/api/data');
-  const D = await res.json();
-  const c = D.chatgpt, g = D.github, y = D.youtube, l = D.linkedin, ins = D.insights || [];
+  const D = await (await fetch('/api/data')).json();
+  const c = D.chatgpt, g = D.github;
 
-  // Hero
+  // Date range
+  const now = new Date(D.generated);
+  const weekAgo = new Date(now - 7*24*60*60*1000);
+  const fmt = d => d.toLocaleDateString('en-US', {month:'short',day:'numeric'});
+  document.getElementById('hero-week').textContent = `${fmt(weekAgo)} — ${fmt(now)}`;
   document.getElementById('hero-num').textContent = c.last7d;
-  document.getElementById('hero-label').textContent = 'conversations with AI this week';
-  document.getElementById('hero-sub').textContent = `across ${Object.keys(c.models).length} models · ${c.totalMessages} messages with content`;
+  document.getElementById('hero-label').textContent = 'conversations with AI';
 
-  // Find insights by type
-  const find = type => ins.find(i => i.type === type) || {};
-
-  const themeInsight = find('theme');
-  const schedInsight = find('schedule');
-  const idInsight = find('identity');
-  const musicInsight = find('music');
-  const aiInsight = find('ai-ecosystem');
-  const memInsight = find('memory');
-  const crossInsight = find('crossref');
-
-  // Theme data for radar
   const themes = c.themeCounts || {};
-  const themeMax = Math.max(...Object.values(themes), 1);
+  const themeColors = {'Baby & Parenting':'#fb7185','AI & Engineering':'#818cf8','Geopolitics':'#fbbf24','Daily Life':'#4ade80','Health & Wellness':'#06b6d4','Crypto / Web3':'#a78bfa','Work/Career':'#f97316','Other':'#555'};
+  const sortedThemes = Object.entries(themes).sort((a,b) => b[1]-a[1]);
+  const themeTotal = sortedThemes.reduce((a,[,n]) => a+n, 0);
 
-  // Build the page
   let html = '';
 
-  // ── 1. THEME RADAR ──
-  html += `<canvas id="radar" width="340" height="340" style="display:block;margin:0 auto 8px"></canvas>`;
-
-  // ── 2. LINKEDIN VS REALITY ──
-  if (idInsight.body) {
-    const aiCount = themes['AI & Engineering'] || 0;
-    const babyCount = themes['Baby & Parenting'] || 0;
-    const dailyCount = themes['Daily Life'] || 0;
-    const geoCount = themes['Geopolitics'] || 0;
-    html += `
-    <div class="card contrast">
-      <div class="contrast-row">
-        <div class="contrast-col">
-          <div class="contrast-emoji">💼</div>
-          <div class="contrast-heading gray">LinkedIn says</div>
-          <div style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.5">${esc(l.profile.headline)}</div>
-        </div>
-        <div class="contrast-col">
-          <div class="contrast-emoji">💬</div>
-          <div class="contrast-heading bright">ChatGPT says</div>
-          <ul class="contrast-list real">
-            ${babyCount ? `<li>Baby & parenting — ${babyCount} convos</li>` : ''}
-            ${aiCount ? `<li>AI engineering — ${aiCount} convos</li>` : ''}
-            ${dailyCount ? `<li>Daily life stuff — ${dailyCount} convos</li>` : ''}
-            ${geoCount ? `<li>Geopolitics — ${geoCount} convos</li>` : ''}
-          </ul>
-        </div>
-      </div>
-    </div>`;
-  }
-
-  // ── 3. SCHEDULE ──
-  if (c.hoursCT) {
-    const hours = c.hoursCT;
-    const hMax = Math.max(...Object.values(hours).map(Number), 1);
-    html += `
-    <div class="card stat-card">
-      <div class="stat-card-title">When you think · Central Time</div>
-      <div class="timeline-bar">
-        ${Array.from({length:24},(_,h)=>{
-          const v = Number(hours[h]||0);
-          const pct = v > 0 ? Math.max(8, (v/hMax)*100) : 2;
-          const hue = h < 6 || h >= 22 ? 270 : h < 12 ? 200 : h < 17 ? 45 : 30;
-          const bg = v > 0 ? `hsla(${hue}, 70%, 60%, ${0.3 + (v/hMax)*0.5})` : 'rgba(255,255,255,0.03)';
-          return `<div class="col" style="height:${pct}%;background:${bg}" data-tip="${fmtH(h)}: ${v} convos"></div>`;
-        }).join('')}
-      </div>
-      <div class="timeline-labels">${['12a','','','3a','','','6a','','','9a','','','12p','','','3p','','','6p','','','9p','',''].map(l=>`<span>${l}</span>`).join('')}</div>
-      <div style="text-align:center;margin-top:12px;font-size:13px;color:rgba(255,255,255,0.4)">
-        Peak at <strong style="color:#4af">${fmtH(c.peakHour)}</strong> · ${c.nightConvos} late night session${c.nightConvos!==1?'s':''}
-      </div>
-    </div>`;
-  }
-
-  // ── 4. MUSIC IDENTITY ──
-  if (musicInsight.artists && musicInsight.artists.length > 3) {
-    const arts = musicInsight.artists;
-    // Split into "electronic/pop" and "spiritual/ambient"
-    const electronic = arts.filter(a => /calvin|chainsmoker|tove|jvke|flicaro|bobz/i.test(a.name));
-    const spiritual = arts.filter(a => /sagrada|mantra|ayahuasca|deuter|medicine|seia|gabriella|canal/i.test(a.name));
-    const other = arts.filter(a => !electronic.includes(a) && !spiritual.includes(a));
-
-    html += `
-    <div class="card" style="position:relative">
-      <div class="music-split">
-        <div class="music-side music-left">
-          <div class="music-genre">Electronic / Pop</div>
-          ${(electronic.length ? electronic : arts.slice(0,3)).map(a => `<div class="music-artist">${esc(a.name)}<span class="music-count" style="margin-left:8px">${a.count} tracks</span></div>`).join('')}
-        </div>
-        <div class="music-side music-right">
-          <div class="music-genre">Sacred / Ambient</div>
-          ${(spiritual.length ? spiritual : arts.slice(3,6)).map(a => `<div class="music-artist">${esc(a.name)}<span class="music-count" style="margin-left:8px">${a.count} tracks</span></div>`).join('')}
-        </div>
-      </div>
-      <div class="music-vs">×</div>
-      <div style="text-align:center;padding:12px 20px 18px;font-size:13px;color:rgba(255,255,255,0.35)">
-        ${y.totalTracks} tracks across ${y.playlists.length} playlists. Festival energy meets ceremony.
-      </div>
-    </div>`;
-  }
-
-  // ── 5. THE CROSS-REFERENCE — Baby songs ──
-  if (crossInsight.body) {
-    html += `
-    <div class="card callout">
-      <div style="font-size:40px;margin-bottom:8px">🎵 → 🍼</div>
-      <div class="callout-number" style="background:linear-gradient(135deg,#fbbf24,#fb7185);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">${crossInsight.title.split(' ')[0] || 'Making music'}</div>
-      <div class="callout-text">${esc(crossInsight.body)}</div>
-    </div>`;
-  }
-
-  // ── 6. AI ECOSYSTEM ──
-  if (aiInsight.body) {
-    html += `
-    <div class="card stat-card">
-      <div class="stat-card-title">Your AI ecosystem</div>
-      <div style="display:flex;gap:16px;margin-bottom:14px;flex-wrap:wrap">
-        <div style="flex:1;min-width:120px">
-          <div style="font-size:11px;color:rgba(255,255,255,0.2);margin-bottom:6px">MODELS YOU USE</div>
-          ${Object.entries(c.models).map(([m,n]) => {
-            const color = m.includes('4o') ? '#34d399' : m.includes('5') ? '#c084fc' : '#fcd34d';
-            return `<div style="font-size:14px;font-weight:600;color:${color};margin-bottom:2px">${m} <span style="opacity:0.4;font-weight:400">${n}</span></div>`;
-          }).join('')}
-        </div>
-        <div style="flex:1;min-width:120px">
-          <div style="font-size:11px;color:rgba(255,255,255,0.2);margin-bottom:6px">TOOLS YOU BUILD</div>
-          ${g.aiRepos.slice(0,4).map(r => `<div style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:2px">${esc(r)}</div>`).join('')}
-          ${g.aiRepos.length > 4 ? `<div style="font-size:12px;color:rgba(255,255,255,0.2)">+${g.aiRepos.length-4} more</div>` : ''}
-        </div>
-      </div>
-      <div style="font-size:13px;color:rgba(255,255,255,0.3);text-align:center">Consumer and builder. ${g.totalRepos} repos · ${g.profile.followers} followers</div>
-    </div>`;
-  }
-
-  // ── 7. MEMORY ──
-  if (memInsight.body) {
-    html += `
-    <div class="card callout">
-      <div class="callout-number" style="color:rgba(6,182,212,0.8)">${c.memories}</div>
-      <div class="callout-text">things ChatGPT permanently remembers about you</div>
-      <div class="callout-detail">${esc(memInsight.body)}</div>
-    </div>`;
-  }
-
-  // ── 8. GITHUB LANGUAGES ──
-  const langEntries = Object.entries(g.languages).sort((a,b) => b[1]-a[1]).slice(0,6);
-  if (langEntries.length > 0) {
-    const total = langEntries.reduce((a,[,n]) => a+n, 0);
-    const colors = {Python:'#3572A5',JavaScript:'#f1e05a',TypeScript:'#3178c6',Go:'#00ADD8',Ruby:'#701516',Shell:'#89e051',HTML:'#e34c26',HCL:'#844FBA'};
-    html += `
-    <div class="card stat-card">
-      <div class="stat-card-title">Code DNA · ${g.totalRepos} repositories</div>
-      <div style="display:flex;height:28px;border-radius:6px;overflow:hidden;margin-bottom:12px">
-        ${langEntries.map(([lang,n]) => `<div style="flex:${n};background:${colors[lang]||'#4af'};opacity:0.7" title="${lang}: ${n}"></div>`).join('')}
-      </div>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
-        ${langEntries.map(([lang,n]) => `<div style="font-size:12px;color:rgba(255,255,255,0.45);display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;border-radius:50%;background:${colors[lang]||'#4af'}"></div>${lang} <span style="opacity:0.5">${Math.round(n/total*100)}%</span></div>`).join('')}
-      </div>
-    </div>`;
-  }
-
-  // ── 9. LIFE STATS (bottom) ──
-  html += `
-  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
-    <div class="card callout" style="flex:1;min-width:140px;margin-bottom:0">
-      <div class="callout-number" style="color:rgba(255,255,255,0.15);font-size:36px">${c.total.toLocaleString()}</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.2)">all-time ChatGPT conversations</div>
-    </div>
-    <div class="card callout" style="flex:1;min-width:140px;margin-bottom:0">
-      <div class="callout-number" style="color:rgba(255,255,255,0.15);font-size:36px">${l.totalConnections}</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.2)">LinkedIn connections</div>
+  // ── DONUT: What you thought about ──
+  html += `<div class="donut-wrap">
+    <canvas id="donut" width="160" height="160"></canvas>
+    <div class="donut-legend">
+      ${sortedThemes.map(([t,n]) => `<div class="donut-item"><div class="donut-dot" style="background:${themeColors[t]||'#555'}"></div>${t}<span class="donut-count">${n}</span></div>`).join('')}
     </div>
   </div>`;
 
-  document.getElementById('out').innerHTML = html;
-  document.getElementById('footer').textContent = `Data from Vana · ${new Date(D.generated).toLocaleDateString('en-US', {month:'long',day:'numeric',year:'numeric'})}`;
+  // ── HOURS: When you think ──
+  const hours = c.hoursCT || {};
+  const hMax = Math.max(...Object.values(hours).map(Number), 1);
+  html += `<div class="card">
+    <div class="card-title">When you think · Central Time</div>
+    <div style="padding-top:14px">
+      <div class="hours-bar">
+        ${Array.from({length:24},(_,h)=>{
+          const v = Number(hours[h]||0);
+          const pct = v > 0 ? Math.max(10, (v/hMax)*100) : 3;
+          const isNight = h < 6 || h >= 22;
+          const isMorning = h >= 6 && h < 12;
+          const hue = isNight ? 270 : isMorning ? 200 : h < 17 ? 45 : 30;
+          const bg = v > 0 ? `hsla(${hue}, 70%, 55%, ${0.25 + (v/hMax)*0.55})` : 'rgba(255,255,255,0.02)';
+          return `<div class="col" style="height:${pct}%;background:${bg}" title="${fmtH(h)}: ${v}"></div>`;
+        }).join('')}
+      </div>
+      <div class="hours-labels">${['12a','','','3a','','','6a','','','9a','','','12p','','','3p','','','6p','','','9p','','',''].map(l=>`<span>${l}</span>`).join('')}</div>
+    </div>
+    <div class="hours-insight">
+      Peak at <strong style="color:#4af">${fmtH(c.peakHour)}</strong> ·
+      ${c.nightConvos} after midnight${c.nightConvos > 3 ? ' — the baby isn\'t the only one up' : ''}
+    </div>
+  </div>`;
 
-  // Draw radar
-  drawRadar(themes);
+  // ── DAYS: Activity by day ──
+  const dayConvos = {};
+  for (const cv of (c.recentConvos || [])) {
+    if (!cv.created) continue;
+    const d = new Date(cv.created);
+    const day = d.toLocaleDateString('en-US', {weekday: 'short'});
+    dayConvos[day] = (dayConvos[day] || 0) + 1;
+  }
+  const dayOrder = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const dMax = Math.max(...Object.values(dayConvos), 1);
+  html += `<div class="card">
+    <div class="card-title">Conversations by day</div>
+    <div class="day-row">
+      ${dayOrder.map(d => {
+        const v = dayConvos[d] || 0;
+        const pct = v > 0 ? Math.max(15, (v/dMax)*100) : 5;
+        return `<div class="day-col">
+          <div class="day-label">${d}</div>
+          <div class="day-val" style="color:${v>0?'rgba(68,170,255,'+(0.4+v/dMax*0.6)+')':'rgba(255,255,255,0.08)'}">${v||'·'}</div>
+          <div class="day-bar" style="background:${v>0?'rgba(68,170,255,'+(0.15+v/dMax*0.4)+')':'rgba(255,255,255,0.02)'};width:${pct}%;margin-left:auto;margin-right:auto"></div>
+        </div>`;
+      }).join('')}
+    </div>
+  </div>`;
+
+  // ── MODELS: What you used ──
+  html += `<div class="card">
+    <div class="card-title">Models this week · ${c.totalMessages} messages</div>
+    <div class="model-row">
+      ${Object.entries(c.models).map(([m,n]) => {
+        const total = Object.values(c.models).reduce((a,b)=>a+b,0);
+        const pct = Math.round(n/total*100);
+        const color = m.includes('4o') ? '#34d399' : m.includes('5') ? '#c084fc' : '#fcd34d';
+        const bg = m.includes('4o') ? 'rgba(52,211,153,0.1)' : m.includes('5') ? 'rgba(192,132,252,0.1)' : 'rgba(252,211,77,0.1)';
+        return `<div class="model-chip" style="background:${bg};color:${color};border:1px solid ${color}22">${m} <span style="opacity:0.5">${pct}%</span></div>`;
+      }).join('')}
+    </div>
+  </div>`;
+
+  // ── CONTRAST: What LinkedIn thinks vs what you actually asked ──
+  const topTheme = sortedThemes[0];
+  const secondTheme = sortedThemes[1];
+  if (topTheme && D.linkedin?.profile?.headline) {
+    html += `<div class="card">
+      <div class="contrast">
+        <div class="contrast-side">
+          <div class="contrast-label" style="color:rgba(255,255,255,0.15)">💼 LinkedIn bio</div>
+          <div class="contrast-items" style="font-size:14px;color:rgba(255,255,255,0.35)">${esc(D.linkedin.profile.headline)}</div>
+        </div>
+        <div class="contrast-side">
+          <div class="contrast-label" style="color:#4af">💬 This week's reality</div>
+          <div class="contrast-items">
+            <strong style="color:${themeColors[topTheme[0]]}">${topTheme[0]}</strong> — ${topTheme[1]} convos<br>
+            ${secondTheme ? `<strong style="color:${themeColors[secondTheme[0]]}">${secondTheme[0]}</strong> — ${secondTheme[1]} convos` : ''}
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  // ── TOPICS: Everything you asked about ──
+  const themed = c.themedTitles || {};
+  html += `<div class="card">
+    <div class="card-title">Every topic this week</div>
+    <div class="topics-flow">
+      ${c.topics7d.map(t => {
+        // Find theme color for this topic
+        let color = 'rgba(255,255,255,0.04)';
+        for (const [theme, titles] of Object.entries(themed)) {
+          if (titles.includes(t)) { color = (themeColors[theme]||'#555') + '15'; break; }
+        }
+        return `<div class="topic-pill" style="background:${color};color:rgba(255,255,255,0.5)">${esc(t)}</div>`;
+      }).join('')}
+    </div>
+  </div>`;
+
+  // ── GITHUB: Code this week ──
+  if (g.active7d.length > 0) {
+    html += `<div class="card">
+      <div class="card-title">🐙 GitHub — ${g.active7d.length} repos touched</div>
+      ${g.active7d.map(r => `<div class="repo-row">
+        <div><div class="repo-name">${esc(r.name)}</div>${r.description ? `<div class="repo-desc">${esc(r.description)}</div>` : ''}</div>
+        <div class="repo-lang">${r.language || ''}</div>
+      </div>`).join('')}
+    </div>`;
+  }
+
+  // ── CALLOUT: The week in one number ──
+  // Find the most interesting single stat
+  const topPct = topTheme ? Math.round(topTheme[1] / themeTotal * 100) : 0;
+  html += `<div class="card callout">
+    <div class="callout-big" style="color:${themeColors[topTheme?.[0]] || '#4af'}">${topPct}%</div>
+    <div class="callout-text">${topTheme ? `of your AI conversations this week were about <strong style="color:${themeColors[topTheme[0]]}">${topTheme[0].toLowerCase()}</strong>` : 'of your week'}</div>
+  </div>`;
+
+  document.getElementById('out').innerHTML = html;
+  document.getElementById('footer').textContent = `Data from Vana · Generated ${now.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit'})}`;
+
+  // Draw donut
+  drawDonut(sortedThemes, themeColors);
 }
 
-function drawRadar(themes) {
-  const canvas = document.getElementById('radar');
+function drawDonut(themes, colors) {
+  const canvas = document.getElementById('donut');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   const W = canvas.width, H = canvas.height;
-  const cx = W/2, cy = H/2;
-  const R = 130;
+  const cx = W/2, cy = H/2, R = 65, r = 40;
+  const total = themes.reduce((a,[,n]) => a+n, 0);
 
-  const labels = Object.keys(themes);
-  const values = Object.values(themes);
-  const max = Math.max(...values, 1);
-  const n = labels.length;
-  if (n < 3) return;
+  let angle = -Math.PI/2;
+  for (const [label, count] of themes) {
+    const sweep = (count/total) * Math.PI * 2;
+    const color = colors[label] || '#555';
 
-  const colors = {'Baby & Parenting':'#fb7185','AI & Engineering':'#818cf8','Geopolitics':'#fbbf24','Daily Life':'#4ade80','Health & Wellness':'#06b6d4','Crypto / Web3':'#a78bfa','Work/Career':'#f97316','Other':'#666'};
-
-  // Grid rings
-  ctx.strokeStyle = 'rgba(255,255,255,0.04)';
-  ctx.lineWidth = 1;
-  for (let r = 1; r <= 4; r++) {
     ctx.beginPath();
-    ctx.arc(cx, cy, R * r/4, 0, Math.PI*2);
-    ctx.stroke();
-  }
-
-  // Grid lines
-  for (let i = 0; i < n; i++) {
-    const angle = (Math.PI*2*i/n) - Math.PI/2;
-    ctx.beginPath();
-    ctx.moveTo(cx, cy);
-    ctx.lineTo(cx + Math.cos(angle)*R, cy + Math.sin(angle)*R);
-    ctx.strokeStyle = 'rgba(255,255,255,0.04)';
-    ctx.stroke();
-  }
-
-  // Data polygon
-  ctx.beginPath();
-  for (let i = 0; i < n; i++) {
-    const angle = (Math.PI*2*i/n) - Math.PI/2;
-    const r = (values[i]/max) * R * 0.85;
-    const x = cx + Math.cos(angle) * r;
-    const y = cy + Math.sin(angle) * r;
-    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-  }
-  ctx.closePath();
-  ctx.fillStyle = 'rgba(68,170,255,0.08)';
-  ctx.fill();
-  ctx.strokeStyle = 'rgba(68,170,255,0.4)';
-  ctx.lineWidth = 2;
-  ctx.stroke();
-
-  // Data points + labels
-  for (let i = 0; i < n; i++) {
-    const angle = (Math.PI*2*i/n) - Math.PI/2;
-    const r = (values[i]/max) * R * 0.85;
-    const x = cx + Math.cos(angle) * r;
-    const y = cy + Math.sin(angle) * r;
-    const color = colors[labels[i]] || '#4af';
-
-    // Point
-    ctx.beginPath();
-    ctx.arc(x, y, 5, 0, Math.PI*2);
+    ctx.arc(cx, cy, R, angle, angle + sweep);
+    ctx.arc(cx, cy, r, angle + sweep, angle, true);
+    ctx.closePath();
     ctx.fillStyle = color;
+    ctx.globalAlpha = 0.7;
     ctx.fill();
 
-    // Glow
-    const grd = ctx.createRadialGradient(x, y, 0, x, y, 15);
-    grd.addColorStop(0, color.replace(')', ',0.3)').replace('rgb', 'rgba'));
-    grd.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = grd;
-    ctx.fillRect(x-15, y-15, 30, 30);
+    // Glow on largest
+    if (count === themes[0][1]) {
+      ctx.globalAlpha = 0.15;
+      ctx.beginPath();
+      ctx.arc(cx, cy, R + 8, angle, angle + sweep);
+      ctx.arc(cx, cy, r - 4, angle + sweep, angle, true);
+      ctx.closePath();
+      ctx.fill();
+    }
 
-    // Label
-    const lx = cx + Math.cos(angle) * (R + 20);
-    const ly = cy + Math.sin(angle) * (R + 20);
-    ctx.font = '600 11px Inter, system-ui, sans-serif';
-    ctx.fillStyle = color;
-    ctx.textAlign = Math.cos(angle) > 0.1 ? 'left' : Math.cos(angle) < -0.1 ? 'right' : 'center';
-    ctx.textBaseline = Math.sin(angle) > 0.1 ? 'top' : Math.sin(angle) < -0.1 ? 'bottom' : 'middle';
-    ctx.fillText(`${labels[i]} (${values[i]})`, lx, ly);
+    ctx.globalAlpha = 1;
+    angle += sweep;
   }
+
+  // Center text
+  ctx.fillStyle = 'rgba(255,255,255,0.6)';
+  ctx.font = '800 24px Inter, system-ui';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(total, cx, cy - 6);
+  ctx.fillStyle = 'rgba(255,255,255,0.2)';
+  ctx.font = '500 10px Inter, system-ui';
+  ctx.fillText('topics', cx, cy + 12);
 }
 
 function fmtH(h) { return h===0?'12am':h<12?h+'am':h===12?'12pm':(h-12)+'pm'; }
