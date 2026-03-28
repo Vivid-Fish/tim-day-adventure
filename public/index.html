@@ -184,56 +184,30 @@ async function init() {
     </div>
   </div>`;
 
-  // ── CONTRAST: What LinkedIn thinks vs what you actually asked ──
+  // ── HIGHLIGHTS: Curated interesting conversations ──
+  const themed = c.themedTitles || {};
   const topTheme = sortedThemes[0];
-  const secondTheme = sortedThemes[1];
-  if (topTheme && D.linkedin?.profile?.headline) {
+  // Pick 1-2 standout titles per theme (skip generic ones)
+  const highlights = [];
+  for (const [theme, titles] of Object.entries(themed)) {
+    const interesting = titles.filter(t => t.length > 10 && !/^User query/.test(t));
+    if (interesting.length > 0) {
+      highlights.push({ theme, title: interesting[0], color: themeColors[theme] || '#555' });
+    }
+  }
+  if (highlights.length > 0) {
     html += `<div class="card">
-      <div class="contrast">
-        <div class="contrast-side">
-          <div class="contrast-label" style="color:rgba(255,255,255,0.15)">💼 LinkedIn bio</div>
-          <div class="contrast-items" style="font-size:14px;color:rgba(255,255,255,0.35)">${esc(D.linkedin.profile.headline)}</div>
-        </div>
-        <div class="contrast-side">
-          <div class="contrast-label" style="color:#4af">💬 This week's reality</div>
-          <div class="contrast-items">
-            <strong style="color:${themeColors[topTheme[0]]}">${topTheme[0]}</strong> — ${topTheme[1]} convos<br>
-            ${secondTheme ? `<strong style="color:${themeColors[secondTheme[0]]}">${secondTheme[0]}</strong> — ${secondTheme[1]} convos` : ''}
-          </div>
-        </div>
+      <div class="card-title">Standout conversations</div>
+      <div class="tl" style="padding: 4px 0">
+        ${highlights.slice(0, 5).map(h => `<div class="tl-item" style="padding:10px 20px">
+          <div class="tl-title">${esc(h.title)}</div>
+          <div class="tl-meta" style="color:${h.color}">${h.theme.split(' ')[0]}</div>
+        </div>`).join('')}
       </div>
     </div>`;
   }
 
-  // ── TOPICS: Everything you asked about ──
-  const themed = c.themedTitles || {};
-  html += `<div class="card">
-    <div class="card-title">Every topic this week</div>
-    <div class="topics-flow">
-      ${c.topics7d.map(t => {
-        // Find theme color for this topic
-        let color = 'rgba(255,255,255,0.04)';
-        for (const [theme, titles] of Object.entries(themed)) {
-          if (titles.includes(t)) { color = (themeColors[theme]||'#555') + '15'; break; }
-        }
-        return `<div class="topic-pill" style="background:${color};color:rgba(255,255,255,0.5)">${esc(t)}</div>`;
-      }).join('')}
-    </div>
-  </div>`;
-
-  // ── GITHUB: Code this week ──
-  if (g.active7d.length > 0) {
-    html += `<div class="card">
-      <div class="card-title">🐙 GitHub — ${g.active7d.length} repos touched</div>
-      ${g.active7d.map(r => `<div class="repo-row">
-        <div><div class="repo-name">${esc(r.name)}</div>${r.description ? `<div class="repo-desc">${esc(r.description)}</div>` : ''}</div>
-        <div class="repo-lang">${r.language || ''}</div>
-      </div>`).join('')}
-    </div>`;
-  }
-
   // ── CALLOUT: The week in one number ──
-  // Find the most interesting single stat
   const topPct = topTheme ? Math.round(topTheme[1] / themeTotal * 100) : 0;
   html += `<div class="card callout">
     <div class="callout-big" style="color:${themeColors[topTheme?.[0]] || '#4af'}">${topPct}%</div>
