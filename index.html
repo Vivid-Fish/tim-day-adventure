@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day in the Life: A Tim Adventure</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #e94560;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .scene {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            min-height: 300px;
+        }
+        .narrative {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            white-space: pre-wrap;
+        }
+        .choices {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .choice-btn {
+            background: linear-gradient(135deg, #e94560 0%, #c73e54 100%);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            text-align: left;
+        }
+        .choice-btn:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(233, 69, 96, 0.4);
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .stat {
+            background: rgba(233, 69, 96, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .hidden { display: none; }
+        .ending {
+            text-align: center;
+            font-size: 1.5em;
+            color: #ffd700;
+            margin: 30px 0;
+        }
+        .restart-btn {
+            background: #4ecca3;
+            margin-top: 20px;
+        }
+        .dino-mode {
+            background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
+        }
+        .dino-mode .choice-btn {
+            background: linear-gradient(135deg, #4ecca3 0%, #3da885 100%);
+        }
+        .code-mode {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+            font-family: 'Courier New', monospace;
+        }
+        .epic-text {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🦖 Day in the Life</h1>
+        <p class="subtitle">An Autobiographical Adventure</p>
+        
+        <div class="stats" id="stats">
+            <span class="stat">🍼 Dad Energy: <span id="dad">50</span>%</span>
+            <span class="stat">💻 Hacker Focus: <span id="hacker">50</span>%</span>
+            <span class="stat">🧠 Philosophy: <span id="phil">50</span>%</span>
+        </div>
+
+        <div class="scene" id="scene">
+            <div class="narrative" id="narrative">Loading...</div>
+            <div class="choices" id="choices"></div>
+        </div>
+    </div>
+
+    <script>
+        const state = {
+            dad: 50,
+            hacker: 50,
+            phil: 50,
+            scene: 'start',
+            choices: [],
+            hasWrittenDinoSong: false,
+            hasFixedClawmeter: false,
+            hasPonderedGoodhart: false
+        };
+
+        const scenes = {
+            start: {
+                text: `It's 6:47 AM. You're somewhere between asleep and coffee.\n\nAlex stirs in the next room. Not crying yet — just the telltale dinosaur noises that all babies make before they remember how to be human.\n\nYour phone buzzes. A GitHub notification: someone's opened an issue on clawmeter about Claude API rate limits.\n\nAlso, your brain won't stop thinking about whether AI evaluation tasks can be Goodharted.`,
+                choices: [
+                    { text: "🍼 Check on Alex — investigate the dinosaur", target: "dino_check", dad: 15 },
+                    { text: "💻 Check GitHub first — clawmeter needs you", target: "github_morning", hacker: 15 },
+                    { text: "🧠 Lie there pondering contract-locking vs generative tasks", target: "philosophy_bed", phil: 15 }
+                ]
+            },
+
+            dino_check: {
+                text: `You shuffle to the nursery. Alex is awake, practicing his ancient jungle stare — that look babies get when they're remembering they were once princes of a greater kingdom.\n\nHe makes a sound. Not quite a cry. Not quite.\n\nA sound older than language.\n\n_"I was mighty once,"_ the sound says. _"I am mighty still."_\n\nGigi stirs. "What's he doing?"\n\nYou realize you could write this down. A song about secret dinosaur babies.`,
+                choices: [
+                    { text: "🎵 Write the Secret Dinosaur Baby epic (lullaby version)", target: "dino_lullaby", dad: 20 },
+                    { text: "🐉 Write the DARK EPIC version — Game of Thrones style", target: "dino_epic", dad: 10, phil: 10 },
+                    { text: "💻 He's fine — back to clawmeter bugs", target: "github_morning", hacker: 10 }
+                ]
+            },
+
+            dino_lullaby: {
+                text: `You tap out the lyrics on your phone, one-handed while rocking Alex:\n\n_"They are dinosaurs in secret_\n_Little dinos, brave and true_\n_Learning how to wave and giggle_\n_Learning what the people do..."_\n\nIt's perfect. Gentle. Sleepy. You can already hear the soft piano and warm female vocal in your head.\n\nNow: Suno or Udio?`,
+                choices: [
+                    { text: "☀️ Suno — easier prompting, 10 songs/day free", target: "suno_choice", dad: 10 },
+                    { text: "🎵 Udio — cleaner sound, better fidelity", target: "udio_choice", dad: 10, hacker: 5 },
+                    { text: "🧠 Research consensus more — this is a consequential decision", target: "research_rabbit", phil: 15 }
+                ]
+            },
+
+            dino_epic: {
+                text: `You write something darker. Something that understands what babies really are:\n\n_"No child is born a child._\n_They come forth ancient._\n_All new babies enter the world as small and terrible beasts,_\n_scaled in the old blood, roaring in tongues forgotten..."_\n\nGigi looks at you funny. "What are you typing?"\n\n"Nothing," you say, but you know the truth now. You have seen through the veil.\n\nAlex coos. For a moment, you see the golden eye beneath the human mask.`,
+                choices: [
+                    { text: "📖 Keep writing — this is ART", target: "dino_masterpiece", dad: 10, phil: 20 },
+                    { text: "🎸 This needs METAL music", target: "metal_dino", dad: 15, hacker: 10 },
+                    { text: "💻 Okay, seriously, check GitHub", target: "github_morning", hacker: 15 }
+                ]
+            },
+
+            github_morning: {
+                text: `You open the clawmeter issue. Someone's hitting rate limits on the Claude API polling.\n\nThe bug report is... actually helpful? They included logs. That's rare.\n\nYou could:\n- Add exponential backoff (preservative approach)\n- Cache the quota check (also preservative)\n- Completely refactor the CLI architecture (generative — and risky)\n\nYour own words from yesterday echo: "Preservative only as a staging layer."`,
+                choices: [
+                    { text: "🔒 Add API surface manifest lock first — can't be Goodharted", target: "goodhart_fix", hacker: 20, phil: 10 },
+                    { text: "⚡ Quick fix — exponential backoff, ship it", target: "quick_fix", hacker: 15 },
+                    { text: "🏗️ Full refactor — generative work done right", target: "big_refactor", hacker: 25 }
+                ]
+            },
+
+            philosophy_bed: {
+                text: `You stare at the ceiling. The baby dinosaur has gone quiet.\n\nYou think about the Goodhart problem. The real split isn't "preservative vs generative." It's:\n\n**Don't ask the agent to generate product value unless the value is externally checkable.**\n\nThis applies to your own life too. How much of what you're doing has objective acceptance tests?\n\nYour commit history? The songs you write for Alex?\n\nThe baby makes a tiny roar from the next room. Even that has an oracle: does he sleep?`,
+                choices: [
+                    { text: "🍼 Go to the nursery — empirical testing", target: "dino_check", dad: 20 },
+                    { text: "💻 Apply this framework to clawmeter", target: "github_morning", hacker: 15, phil: 10 },
+                    { text: "🧠 Keep lying here — pure philosophy mode", target: "deep_phil", phil: 25 }
+                ]
+            },
+
+            goodhart_fix: {
+                text: `You implement the contract-locking approach:\n\n1. API surface manifest — locks the public contract\n2. Zod schema tests for CLI JSON output\n3. Snapshot-lock the expected behavior\n\n"An agent cannot cheaply win by deleting or narrowing functionality."\n\nThe fix is elegant. Robust. Boring in the best way. You push to GitHub and update the homebrew tap.\n\nSomeone should build an eval system for fatherhood. What would the oracles be?`,
+                choices: [
+                    { text: "👨‍👩‍👦 Define fatherhood oracles", target: "dad_oracles", dad: 20, phil: 15 },
+                    { text: "🎵 Reward yourself with music research", target: "music_research", dad: 10, hacker: 5 },
+                    { text: "🦖 Check if Alex is still a dinosaur", target: "dino_evolved", dad: 15 }
+                ]
+            },
+
+            suno_choice: {
+                text: `You fire up Suno. The interface is frictionless — exactly what you need at 7 AM.\n\nYou paste your lyrics and add the prompt: "Soft 2-minute bedtime lullaby. Gentle piano, warm female vocal, slow tempo, comforting and sleepy."\n\nThirty seconds later, you have a song. It's... actually good? The AI captured something about the dinosaur-secret vibe you were going for.\n\nYou play it for Alex. He blinks at you, slow and ancient. Approval.`,
+                choices: [
+                    { text: "📤 Share with Gigi — 'I made our baby a dinosaur song'", target: "share_song", dad: 20 },
+                    { text: "🔄 Iterate — try the dark epic version too", target: "dino_epic", dad: 10, phil: 5 },
+                    { text: "💻 That was fun — back to clearcut triage", target: "clearcut_work", hacker: 15 }
+                ]
+            },
+
+            dad_oracles: {
+                text: `You sketch out what fatherhood oracles would look like:\n\n- **Behavior preservation**: Does Alex still have all his original functionality? (10 fingers, 10 toes, laughs at peekaboo)\n- **CI gate**: Does he pass nightly sleep tests?\n- **Snapshot lock**: Photo evidence of growth milestones\n- **External contract**: Does Gigi confirm the dad API is working?\n\nThe deeper truth: there's no complete spec for parenting. You can't lock the contract because the requirements keep changing.\n\nAlex learns to crawl. The whole API surface shifts.`,
+                choices: [
+                    { text: "🎯 Accept ambiguity — ship the dad code", target: "dad_wisdom", dad: 25, phil: 15 },
+                    { text: "📊 Build actual tracking — data-driven fatherhood", target: "dad_metrics", dad: 10, hacker: 15 },
+                    { text: "🎵 Write a song about parenting uncertainty", target: "uncertainty_song", dad: 15, phil: 20 }
+                ]
+            },
+
+            deep_phil: {
+                text: `You achieve enlightenment at 7:23 AM, still in bed, listening to a baby dinosaur breathe.\n\nThe realization:\n\n**All evaluation is proxy evaluation.** Even "objective" oracles are just contracts we've agreed to trust. The API manifest locks behavior, but who decided that behavior was correct?\n\nYou are a small creature pretending to be a responsible adult, maintaining the illusion with linting rules and CI gates.\n\nAlex's cry cuts through your philosophy.\n\n_Oh right. Duty calls._`,
+                choices: [
+                    { text: "🍼 Respond to the dinosaur signal", target: "dino_check", dad: 20 },
+                    { text: "💻 Document this insight in clawmeter/README", target: "github_phil", hacker: 15, phil: 10 },
+                    { text: "🧠 Keep going — you're onto something", target: "enlightenment", phil: 30 }
+                ]
+            },
+
+            enlightenment: {
+                text: `You transcend.\n\nThe boundaries between preservative and generative dissolve. Suno and Udio are the same. Dad mode and hacker mode are the same. The dinosaur and the human — same.\n\nYou are Tim, who writes songs about babies being dinosaurs, who fixes Claude API rate limit bugs before breakfast, who lies awake thinking about whether his evaluation metrics are robust to Goodharting.\n\nThis is the simulation. You are the simulator.\n\nAlex laughs from the other room.\n\n_He knows._`,
+                choices: [
+                    { text: "🏆 ACCEPT YOUR DESTINY", target: "ending_enlightened", dad: 10, hacker: 10, phil: 10 }
+                ]
+            },
+
+            ending_enlightened: {
+                text: `**THE END**\n\n🏆 **ENDING: The Complete Tim**\n\nYou have achieved balance.\n\nDad Energy: ${state.dad}%\nHacker Focus: ${state.hacker}%\nPhilosophy: ${state.phil}%\n\n_"All new babies enter the world as small and terrible beasts... and so do all new days."_\n\nYou faced the fundamental tensions:\n- Preservative vs generative\n- Suno vs Udio\n- Bug fixes vs dinosaur songs\n- External oracles vs internal knowing\n\nAlex is fed. Clawmeter is fixed. The song exists.\n\nThis is what winning looks like.`,
+                choices: [
+                    { text: "🔄 Live another day", target: "start", restart: true }
+                ],
+                isEnding: true
+            },
+
+            dad_wisdom: {
+                text: `**THE END**\n\n👨‍👩‍👦 **ENDING: The Dad Oracle**\n\nYou realized that parenting, like software, has no complete spec. The requirements evolve. The API surface shifts.\n\nYour final stats:\nDad Energy: ${state.dad}%\nHacker Focus: ${state.hacker}%\nPhilosophy: ${state.phil}%\n\n_"You can't lock the contract because the contract is alive."_\n\nYou ship code to production (clawmeter v1.2). You ship songs to your son (The Secret Dinosaur Baby, both versions). You ship wisdom to yourself: evaluation is always proxy evaluation, and that's okay.\n\nGigi finds the metal version on your phone later. "This is... intense."\n\nYou smile. You're all dinosaurs here.`,
+                choices: [
+                    { text: "🔄 Tomorrow is another retro", target: "start", restart: true }
+                ],
+                isEnding: true
+            },
+
+            share_song: {
+                text: `**THE END**\n\n🎵 **ENDING: The Bard of Dondochaka**\n\nYou share the lullaby with Gigi. She laughs, then gets quiet — that good quiet where you know something landed.\n\n"He really is a little dinosaur," she says.\n\nYour stats:\nDad Energy: ${state.dad}%\nHacker Focus: ${state.hacker}%\nPhilosophy: ${state.phil}%\n\nYou didn't fix all the bugs. You didn't solve Goodhart's Law. But you made art about your child, and you shared it, and that's a kind of evaluation no metric can capture.\n\nLater, you'll check if Suno can do a lullaby about rate limit exponential backoff.\n\n(Probably not. Wrong genre.)`,
+                choices: [
+                    { text: "🔄 Write another verse to this life", target: "start", restart: true }
+                ],
+                isEnding: true
+            },
+
+            metal_dino: {
+                text: `**THE END**\n\n🎸 **ENDING: The Dino Metal Opera**\n\nYou created something cursed and beautiful. The dark epic, set to distorted guitars and thundering drums.\n\n_"Taught to be human. Praised for it. Rewarded until the mask fits so well they call it their face."_\n\n\n🎵 *Guitar solo* 🎵\n\nYour stats:\nDad Energy: ${state.dad}%\nHacker Focus: ${state.hacker}%\nPhilosophy: ${state.phil}%\n\nYou will never play this for Alex. Maybe when he's 16. Maybe never. But you made it, and it exists, and some art is just for the artist.\n\nAlso, you fixed that rate limit bug. You're not a complete chaos goblin.\n\nJust... 73% chaos goblin.`,
+                choices: [
+                    { text: "🔄 Wake up and do it all again", target: "start", restart: true }
+                ],
+                isEnding: true
+            },
+
+            quick_fix: {
+                text: `**THE END**\n\n⚡ **ENDING: The Pragmatist**\n\nYou shipped the exponential backoff fix. It's not elegant. It doesn't have a manifest lock or Zod schema validation. But it works.\n\nYour stats:\nDad Energy: ${state.dad}%\nHacker Focus: ${state.hacker}%\nPhilosophy: ${state.phil}%\n\n_"Perfect is the enemy of shipped."_\n\nAlex got fed. The bug got fixed. The dinosaur song exists as a text file you'll finish later.\n\nSometimes winning looks like:\n- 80% solutions\n- 6 hours of sleep\n- Songs that are "good enough"\n- Love that's robust to any oracle\n\nYou close the laptop. There's still coffee in your cup. It's cold now.\n\nYou drink it anyway.`,
+                choices: [
+                    { text: "🔄 Tomorrow: more bugs, more songs", target: "start", restart: true }
+                ],
+                isEnding: true
+            }
+        };
+
+        // Add scene transition fallbacks
+        scenes.udio_choice = scenes.suno_choice;
+        scenes.research_rabbit = scenes.dino_lullaby;
+        scenes.dino_masterpiece = scenes.dino_epic;
+        scenes.clearcut_work = scenes.quick_fix;
+        scenes.dino_evolved = scenes.dino_check;
+        scenes.dad_metrics = scenes.dad_wisdom;
+        scenes.uncertainty_song = scenes.share_song;
+        scenes.github_phil = scenes.goodhart_fix;
+        scenes.big_refactor = scenes.quick_fix;
+
+        function render() {
+            const scene = scenes[state.scene];
+            document.getElementById('dad').textContent = state.dad;
+            document.getElementById('hacker').textContent = state.hacker;
+            document.getElementById('phil').textContent = state.phil;
+            
+            document.getElementById('narrative').textContent = scene.text;
+            
+            const choicesDiv = document.getElementById('choices');
+            choicesDiv.innerHTML = '';
+            
+            scene.choices.forEach(choice => {
+                const btn = document.createElement('button');
+                btn.className = 'choice-btn';
+                btn.textContent = choice.text;
+                btn.onclick = () => choose(choice);
+                choicesDiv.appendChild(btn);
+            });
+
+            // Visual modes
+            document.body.className = '';
+            if (state.dad > 70) document.body.classList.add('dino-mode');
+            if (state.hacker > 70) document.body.classList.add('code-mode');
+        }
+
+        function choose(choice) {
+            if (choice.restart) {
+                state.dad = 50;
+                state.hacker = 50;
+                state.phil = 50;
+            } else {
+                state.dad = Math.min(100, state.dad + (choice.dad || 0));
+                state.hacker = Math.min(100, state.hacker + (choice.hacker || 0));
+                state.phil = Math.min(100, state.phil + (choice.phil || 0));
+            }
+            state.scene = choice.target;
+            render();
+        }
+
+        // Start
+        render();
+    </script>
+</body>
+</html>
