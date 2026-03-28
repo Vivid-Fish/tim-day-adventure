@@ -1,0 +1,2256 @@
+{
+  "linkedin.profile": {
+    "profileUrl": "https://www.linkedin.com/in/timnunamaker/",
+    "fullName": "Tim Nunamaker",
+    "headline": "Gen AI / Decentralization / System Design / Team Building",
+    "location": "Austin, Texas, United States",
+    "connections": "350",
+    "profilePictureUrl": "https://media.licdn.com/dms/image/v2/C4E03AQGesRQKjK0yvg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1615495611692?e=1776297600&v=beta&t=4e0PonAmpH44HJ34KqHqtQJfq9ujP3x-afnZfSG1BM8",
+    "about": "Located in Austin and interested in machine learning applications, system design, compelling user experiences, social coordination, and building teams."
+  },
+  "linkedin.experience": {
+    "experiences": [
+      {
+        "jobTitle": "Head of Protocol",
+        "companyName": "OpenDataLabs",
+        "dates": "11/2024 - Present",
+        "location": "",
+        "description": ""
+      },
+      {
+        "jobTitle": "Senior Full Stack Engineer",
+        "companyName": "Vana",
+        "dates": "11/2022 - 11/2024",
+        "location": "",
+        "description": "Building the user-owned data network where data privacy, generative AI, and web3 intersect.\n\n* R&D for decentralized consensus, zero-knowledge data validation\n* Created the Vana Personal Server desktop application for hosting personal data with local models: https://github.com/vana-com/personal-server\n* Data validation, anti-fraud components, and incentives in partnership with the first-ever data DAO, rdatadata.org\n* Tech lead for user-data-driven, consumer digital persona applications involving extensive R&D in AI engineering\n* Core contributor of the Vana gen AI user-portrait experience with over one million users, portrait.vana.com"
+      },
+      {
+        "jobTitle": "Senior Staff Software Engineer",
+        "companyName": "DailyPay, Inc.",
+        "dates": "3/2021 - 8/2022",
+        "location": "",
+        "description": "Led and supported new market initiatives at DailyPay with technical discovery, solution design, feature implementation, and team building. Worked closely with product and engineering leadership on new market product strategies.\n\n  •  Cultivated an engaged, high-throughput, remote API team by prioritizing key business metrics, defining a shared vision, encouraging ownership, and building workflows to reduce friction in these areas.\n  •  Designed a RESTful API and authored a formal specification to expedite a pilot deal and core product API proof-of-concept.\n  •  Led the API product from proof-of-concept to successful launch, built within the core DailyPay Ruby on Rails app.\n  •  Built an internal API documentation site with OpenAPI, Slate and S3.\n  •  Coached UX-first RESTful API design via OpenAPI and JSON Schema.\n  •  Designed and implemented API production support policies, observability instrumentation, and reporting that revealed preexisting failures in core product user experiences.\n  •  Owned technical discovery for a new consumer banking card known as Friday. This spanned assessing technical feasibility, vendor implementation and integration proof-of-concepts, and architecture.\n  •  Authored an API permissions solution design to address permutations of API resources and clients.\n  •  Designed & facilitated numerous interviews that both built an effective API team and brought a Belfast engineering team online.\n  •  Built a client-facing payroll anomaly report that spanned a ReactJS client, GraphQL backend, and data science API integration, to minimize accounting errors and financial risk."
+      },
+      {
+        "jobTitle": "Senior Software Engineer",
+        "companyName": "Indeed.com",
+        "dates": "11/2019 - 3/2021",
+        "location": "Austin, Texas, United States",
+        "description": "Engineering lead for job posting promotions and the billing user experience. This role emphasized scoping engineering tasks, rapid experimentation, and mentoring engineers.\n\n  •  Led and mentored a team of new engineers to rapidly enable autonomy and product ownership.\n  •  Increased company revenue through the development of product promotions and enhancements, implemented as split test experiments with the Indeed Proctor framework, across a ReactJS front-end and Java backend.\n  •  Assumed ownership of billing pages for the job posting product. Established production monitoring and alerting, comprehensive automated testing, and continuous deployment.\n  •  Scoped and oversaw the front-end engineering work for the implementation of a new pricing model that spanned multiple projects and teams."
+      },
+      {
+        "jobTitle": "Staff Software Engineer",
+        "companyName": "Bazaarvoice",
+        "dates": "9/2013 - 11/2019",
+        "location": "Austin, Texas",
+        "description": "Led a front-end infrastructure team and cross-team system design, roadmap-building, prioritization, and mentoring.\n\n  •  Reduced client implementation time by 10x and improved client satisfaction by leading an engineering team through the invention of a UI platform for highly flexible product customizations.\n  •  Unified all JavaScript products under a single loading mechanism and asset deployment pipeline. This   •  simplified client implementations and front-end development.\n  •  Enabled the product team to deliver a demonstrably valuable ecommerce Review Highlights product by building A/B testing capabilities and advocating for data-driven innovation.\n  •  Automated product configuration schema management by building a customizable JSON editor to support many non-technical users.\n  •  Modernized the client-facing product configuration UI by building a Backbone application dynamically rendered from JSON to minimize maintenance requirements as configuration schemas evolve."
+      },
+      {
+        "jobTitle": "Senior Software Developer",
+        "companyName": "HEB",
+        "dates": "5/2009 - 9/2013",
+        "location": "San Antonio, Texas",
+        "description": "Individual contributor and tech lead for greenfield business tools (e.g. vendor and accounting portals), and later consumer-facing heb.com.\n\n  •  Improved heb.com build execution by 20x by designing a Gradle plugin for Oracle ATG E-commerce projects, migrating from Ant.\n  •  Fostered healthy engineering culture: implemented peer code reviews, managed CVS to Git transition, modernized tech stacks, tech lead."
+      }
+    ]
+  },
+  "linkedin.education": {
+    "education": [
+      {
+        "schoolName": "Trinity University",
+        "degree": "B.S., B.A., Computer Science, Engineering, Mathematics",
+        "years": "2004 - 2009",
+        "grade": "",
+        "logoUrl": "https://media.licdn.com/dms/image/v2/D560BAQGc8Ep7quccOQ/img-crop_100/B56Z0M_Cu1GYAM-/0/1774039346740?e=1776297600&v=beta&t=vURKihLpE1iXLm4xfOAce2eV9BlEc8X_rxp7IjawIkA"
+      }
+    ]
+  },
+  "linkedin.skills": {
+    "skills": [
+      {
+        "name": "REST APIs",
+        "endorsements": "0"
+      },
+      {
+        "name": "Ruby on Rails",
+        "endorsements": "0"
+      },
+      {
+        "name": "GraphQL",
+        "endorsements": "0"
+      },
+      {
+        "name": "A/B Testing",
+        "endorsements": "0"
+      },
+      {
+        "name": "Solution Architecture",
+        "endorsements": "0"
+      },
+      {
+        "name": "Spring MVC",
+        "endorsements": "0"
+      },
+      {
+        "name": "Technical Leadership",
+        "endorsements": "0"
+      },
+      {
+        "name": "JavaScript",
+        "endorsements": "0"
+      },
+      {
+        "name": "Node.js",
+        "endorsements": "0"
+      },
+      {
+        "name": "React.js",
+        "endorsements": "0"
+      },
+      {
+        "name": "Web Applications",
+        "endorsements": "0"
+      },
+      {
+        "name": "Software Design",
+        "endorsements": "0"
+      },
+      {
+        "name": "Java",
+        "endorsements": "0"
+      },
+      {
+        "name": "Git",
+        "endorsements": "0"
+      },
+      {
+        "name": "Android",
+        "endorsements": "0"
+      },
+      {
+        "name": "SQL",
+        "endorsements": "0"
+      }
+    ]
+  },
+  "linkedin.languages": {
+    "languages": [
+      {
+        "name": "German",
+        "proficiency": ""
+      }
+    ]
+  },
+  "linkedin.connections": {
+    "connections": [
+      {
+        "fullName": "Nissan Dookeran",
+        "headline": "Voice AI + Agentic Systems Engineer @ Synechron | Building Banking’s Next Gen AI | Founder",
+        "profileUrl": "https://www.linkedin.com/in/nissandookeran/",
+        "dateConnected": "2026-02-27"
+      },
+      {
+        "fullName": "Caroline West",
+        "headline": "Operations | HR | Account & Project Management",
+        "profileUrl": "https://www.linkedin.com/in/carolinewest2018/",
+        "dateConnected": "2026-02-27"
+      },
+      {
+        "fullName": "Anuj Shankar",
+        "headline": "CEO at Luganodes (We're Hiring) | Ex-McKinsey & Company | Ex-Microsoft",
+        "profileUrl": "https://www.linkedin.com/in/anujshankar7/",
+        "dateConnected": "2025-10-24"
+      },
+      {
+        "fullName": "Nishant Jain",
+        "headline": "Solutions Engineer @Vana ✦ prev Integrations  - Appwrite ✦ AI - Ethara AI ✦ DevRel - FifthTry (YC W21) ✦  Open-Source & Hackathons.",
+        "profileUrl": "https://www.linkedin.com/in/nishantj2002/",
+        "dateConnected": "2025-10-24"
+      },
+      {
+        "fullName": "Maciej Witowski",
+        "headline": "Head of Engineering | Data Sovereignty & AI",
+        "profileUrl": "https://www.linkedin.com/in/maciej-witowski-143a293a/",
+        "dateConnected": "2025-10-24"
+      },
+      {
+        "fullName": "Geoffrey Bradway",
+        "headline": "Senior AI Engineer & Data Scientist | ML/AI Architecture | Team Leadership | Ex-Google/DeepMind | Numerai | Startup Founder | Building AI Solutions at Scale",
+        "profileUrl": "https://www.linkedin.com/in/geoffrey-bradway/",
+        "dateConnected": "2025-07-29"
+      },
+      {
+        "fullName": "Chris Rinard",
+        "headline": "Standard Kernel Co",
+        "profileUrl": "https://www.linkedin.com/in/rinard/",
+        "dateConnected": "2025-01-22"
+      },
+      {
+        "fullName": "Alex Taylor",
+        "headline": "AI Research | Engineering",
+        "profileUrl": "https://www.linkedin.com/in/alex-taylor-aa931976/",
+        "dateConnected": "2025-01-13"
+      },
+      {
+        "fullName": "Darren Oliveiro-Priestnall",
+        "headline": "Blockchain and Web3 builder. Worked on three layer one blockchain core teams. Founded 3 blockchain and web3 businesses.",
+        "profileUrl": "https://www.linkedin.com/in/darrenop/",
+        "dateConnected": "2024-12-20"
+      },
+      {
+        "fullName": "Ton Chanh Le",
+        "headline": "PhD, Formal Methods, Blockchain, Smart contracts",
+        "profileUrl": "https://www.linkedin.com/in/letonchanh/",
+        "dateConnected": "2024-12-18"
+      },
+      {
+        "fullName": "Vlad Radu",
+        "headline": "Senior Software Engineer | System Architecture, Distributed System & Blockchain | PhD Researcher – Performance & Scalability",
+        "profileUrl": "https://www.linkedin.com/in/vlad-radu-058935b8/",
+        "dateConnected": "2024-11-07"
+      },
+      {
+        "fullName": "Anatoly Shulzhenko",
+        "headline": "Head of Product | Web3",
+        "profileUrl": "https://www.linkedin.com/in/fablerq/",
+        "dateConnected": "2024-10-27"
+      },
+      {
+        "fullName": "",
+        "headline": "",
+        "profileUrl": "",
+        "dateConnected": "2024-10-02"
+      },
+      {
+        "fullName": "Rim Ksontini",
+        "headline": "Full-Stack | Software Engineer | @Desjardins | Ex-UNICEF | Ex-Vana | Ex-NeoLedge | M.A.Sc",
+        "profileUrl": "https://www.linkedin.com/in/rimksontini/",
+        "dateConnected": "2024-09-30"
+      },
+      {
+        "fullName": "Renee Sharina Austria",
+        "headline": "--",
+        "profileUrl": "https://www.linkedin.com/in/renee-austria/",
+        "dateConnected": "2024-07-30"
+      },
+      {
+        "fullName": "Darren Rogan",
+        "headline": "CEO & Founder @ Film Labs | Web3 & AI Innovator | Advisory - Rogues Lab",
+        "profileUrl": "https://www.linkedin.com/in/darrenrogan/",
+        "dateConnected": "2024-07-30"
+      },
+      {
+        "fullName": "Pam Parrish",
+        "headline": "Head of Operations",
+        "profileUrl": "https://www.linkedin.com/in/pam-p-6a7a8043/",
+        "dateConnected": "2024-06-17"
+      },
+      {
+        "fullName": "Bailey Dieckman",
+        "headline": "Marketing & Events Specialist",
+        "profileUrl": "https://www.linkedin.com/in/bailey-dieckman-230404139/",
+        "dateConnected": "2024-06-13"
+      },
+      {
+        "fullName": "Nicholas Steinhilber",
+        "headline": "NodeSet - Incentivizing Decentralization",
+        "profileUrl": "https://www.linkedin.com/in/nicholasteinhilber/",
+        "dateConnected": "2024-06-03"
+      },
+      {
+        "fullName": "Eduard Dumea",
+        "headline": "Senior Blockchain Developer @vana | Ethereum, (EVM, Solidity)",
+        "profileUrl": "https://www.linkedin.com/in/eduard-dumea-1489b010b/",
+        "dateConnected": "2024-05-31"
+      },
+      {
+        "fullName": "Anna Kazlauskas",
+        "headline": "Building Vana",
+        "profileUrl": "https://www.linkedin.com/in/annakaz/",
+        "dateConnected": "2024-05-30"
+      },
+      {
+        "fullName": "Justine Rae Obedoza",
+        "headline": "Customer Support Specialist  l  Social Media Marketing l POC l AI",
+        "profileUrl": "https://www.linkedin.com/in/justine-rae-obedoza-95a8532a1/",
+        "dateConnected": "2024-05-15"
+      },
+      {
+        "fullName": "Catrin Arcega",
+        "headline": "Graduate of BSITTM | Community Support Representative",
+        "profileUrl": "https://www.linkedin.com/in/catrin-arcega-a420b7206/",
+        "dateConnected": "2024-05-15"
+      },
+      {
+        "fullName": "Lenard Gil Alcazar",
+        "headline": "Lead Community Support Specialist",
+        "profileUrl": "https://www.linkedin.com/in/lenard-gil-alcazar/",
+        "dateConnected": "2024-05-15"
+      },
+      {
+        "fullName": "Peter Chris Jhonn Eusebio",
+        "headline": "Customer Support",
+        "profileUrl": "https://www.linkedin.com/in/petereusebio/",
+        "dateConnected": "2024-05-15"
+      },
+      {
+        "fullName": "Jesson Jamola",
+        "headline": "Shift Lead, Community Support Specialist at VANA",
+        "profileUrl": "https://www.linkedin.com/in/jesson-jamola-599036237/",
+        "dateConnected": "2024-05-15"
+      },
+      {
+        "fullName": "Art Abal",
+        "headline": "The Data Guy | Founder, Board Advisor, Investor & Mentor | Human-Centric AI · Data Systems · AI Policy & Ethics",
+        "profileUrl": "https://www.linkedin.com/in/artieart/",
+        "dateConnected": "2024-05-10"
+      },
+      {
+        "fullName": "Gamble McAdam",
+        "headline": "Full Stack Engineering Team Lead | Force Multiplier | Aspiring ML Professional",
+        "profileUrl": "https://www.linkedin.com/in/gamble-mcadam/",
+        "dateConnected": "2024-04-17"
+      },
+      {
+        "fullName": "Andrew Mak",
+        "headline": "Brand Marketing Lead @ Webflow",
+        "profileUrl": "https://www.linkedin.com/in/andrewmak/",
+        "dateConnected": "2023-12-05"
+      },
+      {
+        "fullName": "Manal Farooqui",
+        "headline": "Financial Planning & Analysis @ Planful",
+        "profileUrl": "https://www.linkedin.com/in/manalfarooqui/",
+        "dateConnected": "2023-10-25"
+      },
+      {
+        "fullName": "Andrew Dupont",
+        "headline": "UI Developer and JavaScript Mercenary",
+        "profileUrl": "https://www.linkedin.com/in/savetheclocktower/",
+        "dateConnected": "2023-10-25"
+      },
+      {
+        "fullName": "Zongheng Yang",
+        "headline": "Building SkyPilot",
+        "profileUrl": "https://www.linkedin.com/in/zonghengyang/",
+        "dateConnected": "2023-10-25"
+      },
+      {
+        "fullName": "Paul Garcia",
+        "headline": "Senior Software Engineer at USAA",
+        "profileUrl": "https://www.linkedin.com/in/paul-garcia-4a9731292/",
+        "dateConnected": "2023-10-25"
+      },
+      {
+        "fullName": "Julie Quan",
+        "headline": "Prompt Artist, Multimedia Artist, and Researcher | Studied Art & Psychology",
+        "profileUrl": "https://www.linkedin.com/in/julie-q-102b64217/",
+        "dateConnected": "2023-08-13"
+      },
+      {
+        "fullName": "Daniela Brown",
+        "headline": "Retention Strategy & Execution for Food & Bev Brands 💌 Lifecycle, Email, Subscriptions & Loyalty | Keep your community engaged, appetized, and hungry for more",
+        "profileUrl": "https://www.linkedin.com/in/daniela-brown/",
+        "dateConnected": "2023-08-12"
+      },
+      {
+        "fullName": "Phoebe Sharmaine Austria",
+        "headline": "Executive Recruiter | Strategic Talent Advisor",
+        "profileUrl": "https://www.linkedin.com/in/phoebe-sharmaine-austria/",
+        "dateConnected": "2023-08-10"
+      },
+      {
+        "fullName": "Volodymyr Isai",
+        "headline": "Building User Owned Decentralized Data Network",
+        "profileUrl": "https://www.linkedin.com/in/volodymyr-isai/",
+        "dateConnected": "2023-08-09"
+      },
+      {
+        "fullName": "Kahtaf Alam",
+        "headline": "Engineering Leader | AI, Security, Data Privacy, Scaling Consumer Applications",
+        "profileUrl": "https://www.linkedin.com/in/kahtaf/",
+        "dateConnected": "2023-08-09"
+      },
+      {
+        "fullName": "Stephen Boske, CFA",
+        "headline": "Head of Legal | AI | Ex-Coinbase",
+        "profileUrl": "https://www.linkedin.com/in/stephen-boske-cfa/",
+        "dateConnected": "2023-08-09"
+      },
+      {
+        "fullName": "Connor McLemore",
+        "headline": "Software Engineer @ BlueVoyant | Full Stack Development, Go, Typescript | prev @Microsoft",
+        "profileUrl": "https://www.linkedin.com/in/connormcle/",
+        "dateConnected": "2023-08-09"
+      },
+      {
+        "fullName": "Dr. Sarah I. Manthey",
+        "headline": "Innovation Strategist & Program Builder | Technology Commercialization | TAS Framework | PhD | Open to new opportunities",
+        "profileUrl": "https://www.linkedin.com/in/sarah-manthey/",
+        "dateConnected": "2023-08-09"
+      },
+      {
+        "fullName": "Guilherme Pio",
+        "headline": "Data Engineer | Analytics Engineer | ETL | Product | Marketing & Growth Analytics",
+        "profileUrl": "https://www.linkedin.com/in/guilherme-pio/",
+        "dateConnected": "2023-08-09"
+      },
+      {
+        "fullName": "Diana Mas",
+        "headline": "Design @ Dimo ",
+        "profileUrl": "https://www.linkedin.com/in/diana-mas/",
+        "dateConnected": "2023-08-09"
+      },
+      {
+        "fullName": "Kayla Matthiesen",
+        "headline": "Retention + Email Marketing. Helping Food and Beverage brands build life-long customer love 💌🛒",
+        "profileUrl": "https://www.linkedin.com/in/kayla-matthiesen-349864212/",
+        "dateConnected": "2023-07-05"
+      },
+      {
+        "fullName": "Raymond Xu",
+        "headline": "Founder @ Raysurfer | prev. yc (s24), google | AI Employees",
+        "profileUrl": "https://www.linkedin.com/in/raymond-y-xu/",
+        "dateConnected": "2023-06-16"
+      },
+      {
+        "fullName": "Maximilian  Zehfuss",
+        "headline": "Geschäftsführer bei Digiscape GmbH",
+        "profileUrl": "https://www.linkedin.com/in/maximilian-zehfuss-8850b527b/",
+        "dateConnected": "2023-06-16"
+      },
+      {
+        "fullName": "Brice Fennelly",
+        "headline": "Principal Software Engineer at Indeed.com",
+        "profileUrl": "https://www.linkedin.com/in/brice-fennelly-82979264/",
+        "dateConnected": "2023-06-01"
+      },
+      {
+        "fullName": "Jenny Quan",
+        "headline": "Office + Finance Manager at Dubberly Design Office",
+        "profileUrl": "https://www.linkedin.com/in/jenny-quan-80b558271/",
+        "dateConnected": "2023-05-27"
+      },
+      {
+        "fullName": "Matthias Knauth",
+        "headline": "Director, Product & Token Strategy | Vana - Decentralized Data Layer for the AI Economy",
+        "profileUrl": "https://www.linkedin.com/in/pm-matthias-knauth/",
+        "dateConnected": "2023-05-27"
+      },
+      {
+        "fullName": "Ellison Klose",
+        "headline": "Retail strategy @ Trulieve",
+        "profileUrl": "https://www.linkedin.com/in/ellison-klose-281495122/",
+        "dateConnected": "2023-05-27"
+      },
+      {
+        "fullName": "Bren Motolinía",
+        "headline": "Fotógrafo profesional(Profesional independiente)",
+        "profileUrl": "https://www.linkedin.com/in/bren-motolinía-6b1914245/",
+        "dateConnected": "2023-05-27"
+      },
+      {
+        "fullName": "Nick Madole",
+        "headline": "Product Director @ Indeed.com | Monetization, Pricing Models",
+        "profileUrl": "https://www.linkedin.com/in/nmadole/",
+        "dateConnected": "2023-05-16"
+      },
+      {
+        "fullName": "Colin Stevenson",
+        "headline": "Ops leader",
+        "profileUrl": "https://www.linkedin.com/in/colinjohnstevenson/",
+        "dateConnected": "2023-04-10"
+      },
+      {
+        "fullName": "Ken Langlinais",
+        "headline": "Talent Acquisition",
+        "profileUrl": "https://www.linkedin.com/in/ken-langlinais/",
+        "dateConnected": "2023-04-08"
+      },
+      {
+        "fullName": "Callum Flack",
+        "headline": "design + code",
+        "profileUrl": "https://www.linkedin.com/in/callumflack/",
+        "dateConnected": "2023-04-08"
+      },
+      {
+        "fullName": "Zach Hay",
+        "headline": "Founding Engineer at Humata | GenAI for Work",
+        "profileUrl": "https://www.linkedin.com/in/zahay/",
+        "dateConnected": "2023-03-15"
+      },
+      {
+        "fullName": "Joseph Csoti",
+        "headline": "full stack engineer",
+        "profileUrl": "https://www.linkedin.com/in/josephcsoti/",
+        "dateConnected": "2023-02-13"
+      },
+      {
+        "fullName": "Peter [REDACTED]",
+        "headline": "Senior Software Engineer | Go, Python, PostgreSQL | Backend Systems & Data Pipelines | API Design",
+        "profileUrl": "https://www.linkedin.com/in/peter-redacted-57133a233/",
+        "dateConnected": "2023-02-10"
+      },
+      {
+        "fullName": "Neil Zumwalde",
+        "headline": "Founder | Engineer | Agentic LLM - RAG - MCP | Blockchain Data",
+        "profileUrl": "https://www.linkedin.com/in/neilzumwalde/",
+        "dateConnected": "2023-02-10"
+      },
+      {
+        "fullName": "Shawna Martin-Molina",
+        "headline": "Senior Lead Technical Writer at Bazaarvoice",
+        "profileUrl": "https://www.linkedin.com/in/shawna-martin-molina/",
+        "dateConnected": "2023-01-14"
+      },
+      {
+        "fullName": "Ashley Haylett",
+        "headline": "Operations at Marathon Fusion | Building systems to scale fusion energy",
+        "profileUrl": "https://www.linkedin.com/in/ashleyhaylett/",
+        "dateConnected": "2022-11-25"
+      },
+      {
+        "fullName": "Jolin Cheong",
+        "headline": "People & Talent Leader @UR | Ex-Binance | Ex-Chainlink",
+        "profileUrl": "https://www.linkedin.com/in/jolincheong/",
+        "dateConnected": "2022-11-14"
+      },
+      {
+        "fullName": "Arwin Holmes",
+        "headline": "Blockchain CTO and Digital Assets Technology Leader @ EY",
+        "profileUrl": "https://www.linkedin.com/in/arwinholmes/",
+        "dateConnected": "2022-11-11"
+      },
+      {
+        "fullName": "Sheila Hippert",
+        "headline": "Head of Product at SproutVideo",
+        "profileUrl": "https://www.linkedin.com/in/sheilahippert/",
+        "dateConnected": "2022-11-04"
+      },
+      {
+        "fullName": "Eugene Sychevskiy, MIOP",
+        "headline": "Startup Talent Partner | Technical & GTM Recruiting Expert | Scaling VC/PE‑Backed Teams (Seed → IPO) 🚀",
+        "profileUrl": "https://www.linkedin.com/in/eugenesychevskiy/",
+        "dateConnected": "2022-10-12"
+      },
+      {
+        "fullName": "Mark Di Marco",
+        "headline": "CPTO @ Buildforce",
+        "profileUrl": "https://www.linkedin.com/in/markdimarco/",
+        "dateConnected": "2022-10-12"
+      },
+      {
+        "fullName": "Millie Heuer",
+        "headline": "Attorney @ Cooley LLP",
+        "profileUrl": "https://www.linkedin.com/in/millieheuer/",
+        "dateConnected": "2022-08-19"
+      },
+      {
+        "fullName": "Alexander Hawley",
+        "headline": "Engineering director / principal engineer",
+        "profileUrl": "https://www.linkedin.com/in/alexander-hawley-7a8992/",
+        "dateConnected": "2022-08-19"
+      },
+      {
+        "fullName": "Zach Layng",
+        "headline": "Senior Manager, Engineering",
+        "profileUrl": "https://www.linkedin.com/in/zlayng/",
+        "dateConnected": "2022-08-18"
+      },
+      {
+        "fullName": "Jayandra Pokharel",
+        "headline": "Software Developer",
+        "profileUrl": "https://www.linkedin.com/in/jayandrapokharel/",
+        "dateConnected": "2022-08-11"
+      },
+      {
+        "fullName": "Kapil Gupta",
+        "headline": "Senior Software Engineer at Luna Physical Therapy",
+        "profileUrl": "https://www.linkedin.com/in/kapil2004/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Matthew Singer",
+        "headline": "Vice President of Product Management at DailyPay, Inc.",
+        "profileUrl": "https://www.linkedin.com/in/matthewsinger10033/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Rick Hawley",
+        "headline": "Senior Software Engineer at DailyPay, Inc.",
+        "profileUrl": "https://www.linkedin.com/in/rhawley1/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Alexey Nefedov",
+        "headline": "Data Science & Analytics Leader | Machine Learning & AI Strategist",
+        "profileUrl": "https://www.linkedin.com/in/alexey-nefedov-33694a13/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Konstantin Getmanchuk",
+        "headline": "CPO/Co-founder at Salt Labs",
+        "profileUrl": "https://www.linkedin.com/in/konstantin-g-b514501/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Shivam Patel",
+        "headline": "Software Engineer | Technologist | Driven to Learn",
+        "profileUrl": "https://www.linkedin.com/in/shivam--patel--/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Khalil Kum",
+        "headline": "2020 Hack.Diversity Alumn | Staff Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/khalilkum/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Hammad Khalid",
+        "headline": "Founder | Rounds | Level up your interview game! Save time, find the exact interview round you are preparing for!",
+        "profileUrl": "https://www.linkedin.com/in/hammadkhalid101/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Ryan Lett",
+        "headline": "Director of Security Engineering and Security Operations at DailyPay, Inc.",
+        "profileUrl": "https://www.linkedin.com/in/ryan-lett-4038b65/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Darlene Miranda",
+        "headline": "VP / Head of Product | AI-Driven Product Strategy | Fintech & Enterprise SaaS | Scaling Product-Led Growth",
+        "profileUrl": "https://www.linkedin.com/in/darlene-miranda/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Marc Sendra",
+        "headline": "Director of Capital Markets at Unchained",
+        "profileUrl": "https://www.linkedin.com/in/marcsendra/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Bhuvana Raghu",
+        "headline": "Product Leader | Founder | Helping consumers and small businesses increase productivity using AI",
+        "profileUrl": "https://www.linkedin.com/in/bhuvanaraghu/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Michael Weikman",
+        "headline": "Data Analytics Engineer",
+        "profileUrl": "https://www.linkedin.com/in/michael-weikman-89241823/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Ian Robinson",
+        "headline": "Senior Software Engineer at Dailypay",
+        "profileUrl": "https://www.linkedin.com/in/irobinson22/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Bradley Peterson",
+        "headline": "Site Reliability Engineer",
+        "profileUrl": "https://www.linkedin.com/in/bradley-peterson-devops/",
+        "dateConnected": "2022-08-10"
+      },
+      {
+        "fullName": "Michael Vastola",
+        "headline": "Senior Software Engineer w/ 20+ yrs experience seeking engaging career & growth opportunities in NYC or Remote. (Profile is WIP)",
+        "profileUrl": "https://www.linkedin.com/in/mikevastola/",
+        "dateConnected": "2022-08-09"
+      },
+      {
+        "fullName": "Michael Wang",
+        "headline": "Product Lead at Venmo",
+        "profileUrl": "https://www.linkedin.com/in/mchlwng/",
+        "dateConnected": "2022-08-05"
+      },
+      {
+        "fullName": "Irene Hendricks",
+        "headline": "Chief People Officer | Experienced Leader Creating Outstanding Cultures | Advisor | Angel Investor",
+        "profileUrl": "https://www.linkedin.com/in/irenehendricks/",
+        "dateConnected": "2022-08-05"
+      },
+      {
+        "fullName": "Andrew Shahan",
+        "headline": "Engineering Leader @ DailyPay",
+        "profileUrl": "https://www.linkedin.com/in/andrew-shahan/",
+        "dateConnected": "2022-08-05"
+      },
+      {
+        "fullName": "Joan Breen",
+        "headline": "Director at DailyPay",
+        "profileUrl": "https://www.linkedin.com/in/joan-mcaleer/",
+        "dateConnected": "2022-08-05"
+      },
+      {
+        "fullName": "Lars Wiedenhoefer",
+        "headline": "Product & AI Systems Leader | Fintech & Digital Platforms",
+        "profileUrl": "https://www.linkedin.com/in/wiedenhoefer/",
+        "dateConnected": "2022-08-05"
+      },
+      {
+        "fullName": "Ryan Toh",
+        "headline": "Computer Science at UW-Madison | Previously @DailyPay, @Morgridge, @Superceed",
+        "profileUrl": "https://www.linkedin.com/in/ryantoh/",
+        "dateConnected": "2022-08-05"
+      },
+      {
+        "fullName": "Rob Law",
+        "headline": "Computer Programmer / Serial Entrepreneur",
+        "profileUrl": "https://www.linkedin.com/in/rob-l-salt/",
+        "dateConnected": "2022-02-11"
+      },
+      {
+        "fullName": "Kei Man Yeung",
+        "headline": "Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/kei-man-y-16928880/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "James Livengood",
+        "headline": "Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/james-l-091959a4/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Musa Raza",
+        "headline": "Engineering",
+        "profileUrl": "https://www.linkedin.com/in/musa-raza-80b34a43/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Darren Cho",
+        "headline": "B2B Product Leader for Payroll, Payments & SaaS",
+        "profileUrl": "https://www.linkedin.com/in/darrencho/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Kaelyn Huang",
+        "headline": "Software Engineer at DailyPay, Inc.",
+        "profileUrl": "https://www.linkedin.com/in/kaelyn-arnold/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Anders Cassidy",
+        "headline": "Senior Principal Software Engineer at DailyPay",
+        "profileUrl": "https://www.linkedin.com/in/anders-cassidy/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Brian Kwon",
+        "headline": "Software Engineer at DailyPay, Inc.",
+        "profileUrl": "https://www.linkedin.com/in/kwonbrian/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Michelle Bonavitacola",
+        "headline": "Business Strategy, Development, & Operations Leader",
+        "profileUrl": "https://www.linkedin.com/in/michelle-bonavitacola/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Jonathan McFadden",
+        "headline": "Staff Software Engineer at DailyPay",
+        "profileUrl": "https://www.linkedin.com/in/jonathan-mcfadden-11004214a/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Chris Garber",
+        "headline": "Global Technical Recruiting at MarketAxess",
+        "profileUrl": "https://www.linkedin.com/in/chris-garber-recruit/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Jim Leahy",
+        "headline": "People and Talent Leader",
+        "profileUrl": "https://www.linkedin.com/in/leahyjim/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Fearghal Conn",
+        "headline": "Engineering Manager at DailyPay",
+        "profileUrl": "https://www.linkedin.com/in/fearghalconn/",
+        "dateConnected": "2022-02-10"
+      },
+      {
+        "fullName": "Gavin Gallagher",
+        "headline": "Advisor - Intersection of Business & Technology",
+        "profileUrl": "https://www.linkedin.com/in/gavin-gallagher-880157/",
+        "dateConnected": "2021-08-14"
+      },
+      {
+        "fullName": "Sofia Warren",
+        "headline": "Frontend Engineer II",
+        "profileUrl": "https://www.linkedin.com/in/sofia-warren/",
+        "dateConnected": "2021-08-14"
+      },
+      {
+        "fullName": "Benjamin Bowen",
+        "headline": "Director of Software",
+        "profileUrl": "https://www.linkedin.com/in/benjamin-bowen-b5540a1a/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Don Cover",
+        "headline": "Director of Data Solutions",
+        "profileUrl": "https://www.linkedin.com/in/don-cover/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Akshay Patil",
+        "headline": "Staff Engineer (ML/MLOps) at Hyperscience",
+        "profileUrl": "https://www.linkedin.com/in/akshay-p-920a7118/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Rajitha Peddulla",
+        "headline": "--",
+        "profileUrl": "https://www.linkedin.com/in/rajitha-peddulla/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Caitlin Carey",
+        "headline": "Director of Product Strategy",
+        "profileUrl": "https://www.linkedin.com/in/caitlinruthcarey/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Michael Szymanski 🌎",
+        "headline": "Dad | Husband | Executive Leader | Culture Champion | Builder",
+        "profileUrl": "https://www.linkedin.com/in/michael-szymanski-🌎-3b674a4/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Brian O'Connor",
+        "headline": "Senior Recruiter @ American Century Investments",
+        "profileUrl": "https://www.linkedin.com/in/brian-h-oconnor/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Shawna Baum",
+        "headline": "Strategic HRBP in High-Growth Tech | Trusted Partner to Engineering & GTM Leaders | Founder & Executive Coach",
+        "profileUrl": "https://www.linkedin.com/in/sdbaum/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Andrew Korbak",
+        "headline": "Sales Leader | Scaling HR Tech Growth | GTM Strategy | Enterprise Sales | Connecting Organizations with their People",
+        "profileUrl": "https://www.linkedin.com/in/andrewkorbak/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Jenna A. Lewis Chief of Staff / C-level Executive Assistant",
+        "headline": "Former JP Morgan, Former BlackRock, Former tech on Wall Street.\n\nChief of Staff,\nC-level Senior Executive Assistant,\nEstate Manager,\nEvent Planner",
+        "profileUrl": "https://www.linkedin.com/in/jenna-a-lewis-chief-of-staff-c-level-executive-assistant-01b062138/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "",
+        "headline": "",
+        "profileUrl": "",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Kedar Vaidya",
+        "headline": "Engineering Leader",
+        "profileUrl": "https://www.linkedin.com/in/kedar-vaidya/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "",
+        "headline": "",
+        "profileUrl": "",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Chris Kauffman",
+        "headline": "Director of Product Management at DailyPay",
+        "profileUrl": "https://www.linkedin.com/in/kauffmanchris/",
+        "dateConnected": "2021-08-13"
+      },
+      {
+        "fullName": "Robby Morgan",
+        "headline": "Director Of Technology at Emergent Tree Education",
+        "profileUrl": "https://www.linkedin.com/in/robbymorgan/",
+        "dateConnected": "2021-08-06"
+      },
+      {
+        "fullName": "Patricia Torvalds",
+        "headline": "Senior software engineer, NYC",
+        "profileUrl": "https://www.linkedin.com/in/patriciatorvalds/",
+        "dateConnected": "2021-05-05"
+      },
+      {
+        "fullName": "Leila Yammine Rutledge",
+        "headline": "Senior DevOps Engineer at Bazaarvoice",
+        "profileUrl": "https://www.linkedin.com/in/leilayammine/",
+        "dateConnected": "2021-04-21"
+      },
+      {
+        "fullName": "Derek Rushing",
+        "headline": "Principal-Level Engineering Leadership | Engineering Alignment & AWS Modernization | Founder, Project vNext",
+        "profileUrl": "https://www.linkedin.com/in/derek-rushing-bb885666/",
+        "dateConnected": "2021-04-17"
+      },
+      {
+        "fullName": "Gary Spillman",
+        "headline": "Director of Platform Engineering at Hypori Inc.",
+        "profileUrl": "https://www.linkedin.com/in/gary-spillman-1b389228/",
+        "dateConnected": "2021-04-17"
+      },
+      {
+        "fullName": "David Dyar",
+        "headline": "CTO",
+        "profileUrl": "https://www.linkedin.com/in/david-dyar-758163/",
+        "dateConnected": "2021-04-17"
+      },
+      {
+        "fullName": "Remy Carr",
+        "headline": "Senior Software Engineer at DailyPay, Inc.",
+        "profileUrl": "https://www.linkedin.com/in/remy-carr-bb9a4790/",
+        "dateConnected": "2021-04-17"
+      },
+      {
+        "fullName": "Morgan Wooldridge",
+        "headline": "Senior Business Analyst at Charles Schwab",
+        "profileUrl": "https://www.linkedin.com/in/morganwooldridge/",
+        "dateConnected": "2021-04-17"
+      },
+      {
+        "fullName": "James Riedel",
+        "headline": "Servant Leader in Quality Assurance Engineering",
+        "profileUrl": "https://www.linkedin.com/in/james-riedel-0219b424/",
+        "dateConnected": "2021-03-22"
+      },
+      {
+        "fullName": "Greg Bowers",
+        "headline": "I need to revise this headline. I design stuff. Inclusion and accessibility advocate, systems thinker.",
+        "profileUrl": "https://www.linkedin.com/in/gbbowers/",
+        "dateConnected": "2021-03-22"
+      },
+      {
+        "fullName": "Yun Chuan Ngin",
+        "headline": "Senior Software Engineer | SMU MITB (AI) | Ex-GovTech/Indeed",
+        "profileUrl": "https://www.linkedin.com/in/nginyc/",
+        "dateConnected": "2021-03-14"
+      },
+      {
+        "fullName": "Andy Schlossberg",
+        "headline": "Front-end Engineering leader | UX Engineering leader",
+        "profileUrl": "https://www.linkedin.com/in/andyschlossberg/",
+        "dateConnected": "2021-03-12"
+      },
+      {
+        "fullName": "Melvin Tan",
+        "headline": "Software Engineer, PayPal",
+        "profileUrl": "https://www.linkedin.com/in/melvin--tan/",
+        "dateConnected": "2021-03-12"
+      },
+      {
+        "fullName": "Nikhil Suresh",
+        "headline": "Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/nikhil-sureshc/",
+        "dateConnected": "2021-03-12"
+      },
+      {
+        "fullName": "Pavel Potoplyak",
+        "headline": "Director, Software Engineering, Monetization at Indeed.com",
+        "profileUrl": "https://www.linkedin.com/in/pavelpotoplyak/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Jitendra Tulsiani",
+        "headline": "Distributed Systems | Machine Learning / AI | 17+ YOE (Indeed, Epic) | MSCS Georgia Tech (ML, 4.0 GPA)",
+        "profileUrl": "https://www.linkedin.com/in/jitendratulsiani/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Aviana Martin",
+        "headline": "UX Director at Indeed.com, Growth and Monetization",
+        "profileUrl": "https://www.linkedin.com/in/aviana-martin-28b68557/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Taylor Villarreal",
+        "headline": "Principal PM | Growth, Monetization & AI Hiring",
+        "profileUrl": "https://www.linkedin.com/in/taylorvillarreal/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "RK Vemula",
+        "headline": "Director of Software Engineering, Monetization at Indeed.com",
+        "profileUrl": "https://www.linkedin.com/in/ramakrishnareddyvemula/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Isaiah Reed",
+        "headline": "Software Engineer in Test @ Q2",
+        "profileUrl": "https://www.linkedin.com/in/isaiahreed/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Drew Castillo",
+        "headline": "I'll help you be understood.",
+        "profileUrl": "https://www.linkedin.com/in/drewcastillo/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Bryan Chagoly",
+        "headline": "Co-Owner at Sandy Road Vineyards",
+        "profileUrl": "https://www.linkedin.com/in/bchagoly/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Aaron P. Trull",
+        "headline": "Founder | Board Member | Investor",
+        "profileUrl": "https://www.linkedin.com/in/aaron-p-trull/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Svetlana Garcia",
+        "headline": "Software Engineering Manager at Indeed.com",
+        "profileUrl": "https://www.linkedin.com/in/svetlana-garcia-45126926/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Patrick Kent",
+        "headline": "Product",
+        "profileUrl": "https://www.linkedin.com/in/patrick-kent-b183b311/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Cody Bayer",
+        "headline": "Staff DevOps Engineer at Bazaarvoice",
+        "profileUrl": "https://www.linkedin.com/in/codybayer/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Clarence Chee",
+        "headline": "Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/clarencechee/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Eduardo Rios Jr.",
+        "headline": "Staff Software Engineer at Indeed.com",
+        "profileUrl": "https://www.linkedin.com/in/eduardoriosjr/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Timothy Wilkinson",
+        "headline": "ex-Indeed. CSPO. CSM. QA Manager. Release Manager. Drummer.",
+        "profileUrl": "https://www.linkedin.com/in/timwilk/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Meng Zhou",
+        "headline": "Designing systems that help people make better decisions.",
+        "profileUrl": "https://www.linkedin.com/in/mengzdesign/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "Sunay Nanavati",
+        "headline": "Product Strategy @ Indeed",
+        "profileUrl": "https://www.linkedin.com/in/sunay-nanavati/",
+        "dateConnected": "2021-03-11"
+      },
+      {
+        "fullName": "David Gard",
+        "headline": "Director Digital Systems at H-E-B",
+        "profileUrl": "https://www.linkedin.com/in/david-gard-5a68a2172/",
+        "dateConnected": "2020-03-16"
+      },
+      {
+        "fullName": "Gavin Benedict",
+        "headline": "10+ Years Building Great Software | Frontend Specialist with 6+ Years of React",
+        "profileUrl": "https://www.linkedin.com/in/gbenedict/",
+        "dateConnected": "2019-07-14"
+      },
+      {
+        "fullName": "",
+        "headline": "",
+        "profileUrl": "",
+        "dateConnected": "2019-07-14"
+      },
+      {
+        "fullName": "Ran An",
+        "headline": "Specialist, Implementation Consultant, Enterprise Services",
+        "profileUrl": "https://www.linkedin.com/in/ran183/",
+        "dateConnected": "2019-07-14"
+      },
+      {
+        "fullName": "Jared Enriquez",
+        "headline": "Senior Quality Assurance Engineer at Ping Identity",
+        "profileUrl": "https://www.linkedin.com/in/jaredrenriquez/",
+        "dateConnected": "2019-07-14"
+      },
+      {
+        "fullName": "Christian Johannessen",
+        "headline": "Principal Software Engineer at Indeed. Architect, Jobseeker Profile",
+        "profileUrl": "https://www.linkedin.com/in/cjohannessen/",
+        "dateConnected": "2019-06-01"
+      },
+      {
+        "fullName": "Max Smolev",
+        "headline": "Web applications. Java, basic scala, basic python. HTML, React, JS and CSS/SCSS. AWS cloud (Lambda, API Gateway, DynamoDB, EC2, S3, EFS). Pendo for user experience tracking, UX improvements. Senior Full StackEngineer",
+        "profileUrl": "https://www.linkedin.com/in/msmolev/",
+        "dateConnected": "2019-05-31"
+      },
+      {
+        "fullName": "Manasa Guduru",
+        "headline": "Lead SDET",
+        "profileUrl": "https://www.linkedin.com/in/manasa-guduru/",
+        "dateConnected": "2019-04-19"
+      },
+      {
+        "fullName": "Meenu Venkittarajan",
+        "headline": "Software Engineer at Square",
+        "profileUrl": "https://www.linkedin.com/in/mvenkitt/",
+        "dateConnected": "2019-01-25"
+      },
+      {
+        "fullName": "JoAnn Testerman",
+        "headline": "Executive Assistant",
+        "profileUrl": "https://www.linkedin.com/in/joann-testerman-40269692/",
+        "dateConnected": "2019-01-14"
+      },
+      {
+        "fullName": "Hailey Bobella",
+        "headline": "Staff Software Engineer at DailyPay, Inc.",
+        "profileUrl": "https://www.linkedin.com/in/haileybobella/",
+        "dateConnected": "2018-12-15"
+      },
+      {
+        "fullName": "Homero Valle",
+        "headline": "Leader, engineer, & entrepreneur - triskale.com",
+        "profileUrl": "https://www.linkedin.com/in/homerovalle/",
+        "dateConnected": "2018-12-14"
+      },
+      {
+        "fullName": "Milo Simpson",
+        "headline": "Guamanian/Pragmatic Engineer",
+        "profileUrl": "https://www.linkedin.com/in/milosimpson/",
+        "dateConnected": "2018-12-14"
+      },
+      {
+        "fullName": "Jeff Van Horn",
+        "headline": "Product & Technology Leader",
+        "profileUrl": "https://www.linkedin.com/in/jvanhorn/",
+        "dateConnected": "2018-12-11"
+      },
+      {
+        "fullName": "Van Duong",
+        "headline": "Pharmacist",
+        "profileUrl": "https://www.linkedin.com/in/van-duong-43578051/",
+        "dateConnected": "2018-12-11"
+      },
+      {
+        "fullName": "Gage Randall",
+        "headline": "Software | Design | Music",
+        "profileUrl": "https://www.linkedin.com/in/gage-randall-a9a99672/",
+        "dateConnected": "2018-12-11"
+      },
+      {
+        "fullName": "Elyse Vest",
+        "headline": "Senior Software Engineer at Slack",
+        "profileUrl": "https://www.linkedin.com/in/elyse-vest/",
+        "dateConnected": "2018-12-11"
+      },
+      {
+        "fullName": "Zeshan Anwar",
+        "headline": "Software Engineer at Apple",
+        "profileUrl": "https://www.linkedin.com/in/zeshan-anwar/",
+        "dateConnected": "2018-12-11"
+      },
+      {
+        "fullName": "Kennedy Clement",
+        "headline": "Full time Momma and loving it! ",
+        "profileUrl": "https://www.linkedin.com/in/kennedyclement/",
+        "dateConnected": "2018-12-11"
+      },
+      {
+        "fullName": "Sumi Gomadam",
+        "headline": "Engineering Manager at Stripe with expertise in enterprise software solutions.",
+        "profileUrl": "https://www.linkedin.com/in/sumi-gomadam/",
+        "dateConnected": "2018-12-11"
+      },
+      {
+        "fullName": "Richard Lindsey",
+        "headline": "Principal Software Engineer at Atlassian",
+        "profileUrl": "https://www.linkedin.com/in/richardlindsey/",
+        "dateConnected": "2018-10-02"
+      },
+      {
+        "fullName": "Andrew Wilcox",
+        "headline": "VP of Product at Skimmer",
+        "profileUrl": "https://www.linkedin.com/in/andrewvwilcox/",
+        "dateConnected": "2018-09-19"
+      },
+      {
+        "fullName": "Kindall Carlson",
+        "headline": "Recruiting Operations / Technical Recruiting / Leadership",
+        "profileUrl": "https://www.linkedin.com/in/kindallcarlson/",
+        "dateConnected": "2018-08-09"
+      },
+      {
+        "fullName": "Topher St John",
+        "headline": "Lead Product Designer @ Baylor Scott & White Health",
+        "profileUrl": "https://www.linkedin.com/in/tsjux/",
+        "dateConnected": "2018-07-17"
+      },
+      {
+        "fullName": "Judd Rogers",
+        "headline": "Technical Support Engineer for Google Cloud Platform at Google",
+        "profileUrl": "https://www.linkedin.com/in/juddrogers/",
+        "dateConnected": "2018-07-16"
+      },
+      {
+        "fullName": "Tas Hasting",
+        "headline": "Technical Staff @ Hebbia",
+        "profileUrl": "https://www.linkedin.com/in/tas-hasting/",
+        "dateConnected": "2018-07-14"
+      },
+      {
+        "fullName": "Kenney Wong",
+        "headline": "Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/kenneywong/",
+        "dateConnected": "2018-06-29"
+      },
+      {
+        "fullName": "Thuy Nguyen, PhD",
+        "headline": "Associate Director",
+        "profileUrl": "https://www.linkedin.com/in/thuytnguyen1/",
+        "dateConnected": "2018-06-04"
+      },
+      {
+        "fullName": "Gary Allison",
+        "headline": "Advisor | Board Member",
+        "profileUrl": "https://www.linkedin.com/in/garyallison/",
+        "dateConnected": "2018-05-18"
+      },
+      {
+        "fullName": "jerry lawson",
+        "headline": "Software fanatic",
+        "profileUrl": "https://www.linkedin.com/in/jerrylawson/",
+        "dateConnected": "2018-04-27"
+      },
+      {
+        "fullName": "Michael Van Milligan",
+        "headline": "Connectivity Software Architect @ Apple",
+        "profileUrl": "https://www.linkedin.com/in/mrvm/",
+        "dateConnected": "2018-04-17"
+      },
+      {
+        "fullName": "Lauren Wood Heickman",
+        "headline": "Medical Officer, Division of Diabetes, Lipid Disorders and Obesity, Office of New Drugs, CDER, FDA",
+        "profileUrl": "https://www.linkedin.com/in/lauren-wood-heickman-41b71b158/",
+        "dateConnected": "2018-02-06"
+      },
+      {
+        "fullName": "Michael Goodnow",
+        "headline": "Staff Software Engineer at Bazaarvoice",
+        "profileUrl": "https://www.linkedin.com/in/michaelgoodnow/",
+        "dateConnected": "2017-12-13"
+      },
+      {
+        "fullName": "Joe Pollard",
+        "headline": "Software Developer",
+        "profileUrl": "https://www.linkedin.com/in/joepollard/",
+        "dateConnected": "2017-12-12"
+      },
+      {
+        "fullName": "Dustin Mihalik",
+        "headline": "Experienced Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/dmihalik/",
+        "dateConnected": "2017-11-28"
+      },
+      {
+        "fullName": "Ben Hollander",
+        "headline": "Software Engineer / Engineering Manager",
+        "profileUrl": "https://www.linkedin.com/in/benhollander/",
+        "dateConnected": "2017-11-26"
+      },
+      {
+        "fullName": "Steven Hernandez",
+        "headline": "Senior Software Engineer at Zepz with expertise in AWS and software development",
+        "profileUrl": "https://www.linkedin.com/in/steven-hernandez-58111120/",
+        "dateConnected": "2017-11-01"
+      },
+      {
+        "fullName": "Trisha Organ",
+        "headline": "Senior Software Engineer | 10+ years | API Development, Micro-services, DevOps, Quality code | Java/Kotlin | AWS",
+        "profileUrl": "https://www.linkedin.com/in/trisha-organ-senior-developer/",
+        "dateConnected": "2017-10-22"
+      },
+      {
+        "fullName": "Nicholas Gottschlich",
+        "headline": "Senior Software Engineer @ Vimeo",
+        "profileUrl": "https://www.linkedin.com/in/nicholas-gottschlich/",
+        "dateConnected": "2017-08-30"
+      },
+      {
+        "fullName": "Kiko Ramos",
+        "headline": "Senior Software Engineer at HEB Digital",
+        "profileUrl": "https://www.linkedin.com/in/kikoramos/",
+        "dateConnected": "2017-08-08"
+      },
+      {
+        "fullName": "Taylor McKinney",
+        "headline": "Senior Full Stack Engineer at Revcomm",
+        "profileUrl": "https://www.linkedin.com/in/taylor-mckinney-bb638398/",
+        "dateConnected": "2017-06-08"
+      },
+      {
+        "fullName": "Adrian Bailey",
+        "headline": "H‑E‑B Digital",
+        "profileUrl": "https://www.linkedin.com/in/adrianbailey1/",
+        "dateConnected": "2017-05-09"
+      },
+      {
+        "fullName": "Matias Cantu, CISSP, CISM",
+        "headline": "Information Systems Security Manager at Pape-Dawson Engineers",
+        "profileUrl": "https://www.linkedin.com/in/matiasacantu/",
+        "dateConnected": "2017-04-11"
+      },
+      {
+        "fullName": "Corey Dulimba",
+        "headline": "Group Product Manager at Adobe",
+        "profileUrl": "https://www.linkedin.com/in/coreydulimba/",
+        "dateConnected": "2017-03-20"
+      },
+      {
+        "fullName": "Phillip Haines",
+        "headline": "Consultant",
+        "profileUrl": "https://www.linkedin.com/in/phillip-haines-92468a3b/",
+        "dateConnected": "2017-01-31"
+      },
+      {
+        "fullName": "Emily Cahill",
+        "headline": "Product @ Roz | Former Google SWE",
+        "profileUrl": "https://www.linkedin.com/in/emily-a-cahill/",
+        "dateConnected": "2016-12-22"
+      },
+      {
+        "fullName": "Gaby Prieto",
+        "headline": "Staff Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/gaby-prieto-a08019131/",
+        "dateConnected": "2016-10-27"
+      },
+      {
+        "fullName": "Juliette Kernion",
+        "headline": "Technical Writer, Editor, and Manager",
+        "profileUrl": "https://www.linkedin.com/in/jkernion/",
+        "dateConnected": "2016-09-19"
+      },
+      {
+        "fullName": "Paul Hill",
+        "headline": "Managing Director of DailyPay NI Ltd & VP Engineering",
+        "profileUrl": "https://www.linkedin.com/in/smallmtn/",
+        "dateConnected": "2016-09-09"
+      },
+      {
+        "fullName": "Jeffrey Lubinski",
+        "headline": "Director of Trading at Bullion International Group",
+        "profileUrl": "https://www.linkedin.com/in/jeffrey-lubinski-25212835/",
+        "dateConnected": "2016-09-08"
+      },
+      {
+        "fullName": "Lonni Ingram",
+        "headline": "Staff Frontend Engineer",
+        "profileUrl": "https://www.linkedin.com/in/lawnsea/",
+        "dateConnected": "2016-08-05"
+      },
+      {
+        "fullName": "Andrew Terranova",
+        "headline": "Software Engineering Manager at Adobe",
+        "profileUrl": "https://www.linkedin.com/in/andrewcterranova/",
+        "dateConnected": "2016-08-02"
+      },
+      {
+        "fullName": "Nadia Barbot",
+        "headline": "Group Product Manager at Sysco Labs",
+        "profileUrl": "https://www.linkedin.com/in/nadiabarbot/",
+        "dateConnected": "2016-07-29"
+      },
+      {
+        "fullName": "Steph Lewis",
+        "headline": "Strategic Communicator | Creative Storyteller | Brand Builder",
+        "profileUrl": "https://www.linkedin.com/in/stephlewis/",
+        "dateConnected": "2016-05-18"
+      },
+      {
+        "fullName": "Nils Gillet",
+        "headline": "Senior Manager, Solutions Architecture",
+        "profileUrl": "https://www.linkedin.com/in/nilsgillet/",
+        "dateConnected": "2016-04-26"
+      },
+      {
+        "fullName": "Nathaniel Eliot",
+        "headline": "Helping teams adopt, take advantage of, and develop enterprise-class software.",
+        "profileUrl": "https://www.linkedin.com/in/temujin9/",
+        "dateConnected": "2016-04-21"
+      },
+      {
+        "fullName": "John Steinmetz",
+        "headline": "Insight Architect, Master of the Megabyte, Dragon Slayer.",
+        "profileUrl": "https://www.linkedin.com/in/johnsteinmetz/",
+        "dateConnected": "2016-04-18"
+      },
+      {
+        "fullName": "Danny Anderson, PhD",
+        "headline": "Supporting University and College Presidents, their Leadership Teams, and Boards | Executive Coach | Leadership Coach | Team Builder | Public Speaker | Consultant | President Emeritus, Trinity University",
+        "profileUrl": "https://www.linkedin.com/in/dannyandersonphd/",
+        "dateConnected": "2016-03-11"
+      },
+      {
+        "fullName": "Noah Seger",
+        "headline": "Principal Architect at Chess.com",
+        "profileUrl": "https://www.linkedin.com/in/noah-seger-a5758624/",
+        "dateConnected": "2016-03-04"
+      },
+      {
+        "fullName": "Jonathan McBride",
+        "headline": "Software Quality and Automated Testing Leader",
+        "profileUrl": "https://www.linkedin.com/in/jmcbridetx/",
+        "dateConnected": "2016-02-24"
+      },
+      {
+        "fullName": "Jason Dippel",
+        "headline": "Senior Frontend Engineer",
+        "profileUrl": "https://www.linkedin.com/in/jgdippel/",
+        "dateConnected": "2016-01-17"
+      },
+      {
+        "fullName": "Rebecca Murphey",
+        "headline": "Field CTO @ Swarmia. Strategic advisor, career + leadership coach. Author of Build. I excel at the intersection of people, process, and technology. Ex-Stripe, ex-Indeed.",
+        "profileUrl": "https://www.linkedin.com/in/rmurphey/",
+        "dateConnected": "2016-01-07"
+      },
+      {
+        "fullName": "Kingshuk Choudhury",
+        "headline": "Chief Enterprise Architect | Digital Transformation Leader | Supply Chain & Manufacturing Excellence | SAP | Cloud (AWS, GCP, Azure) | AI/ML | Quantum Computing | TOGAF Certified",
+        "profileUrl": "https://www.linkedin.com/in/kingshukchoudhurychiefarchitect/",
+        "dateConnected": "2016-01-01"
+      },
+      {
+        "fullName": "Scott Allen",
+        "headline": "Client Success Leader | Founder | 90 Day Finn",
+        "profileUrl": "https://www.linkedin.com/in/ettorney/",
+        "dateConnected": "2015-12-11"
+      },
+      {
+        "fullName": "Nick Rawlings",
+        "headline": "_",
+        "profileUrl": "https://www.linkedin.com/in/nick-rawlings-1a67202b/",
+        "dateConnected": "2015-11-03"
+      },
+      {
+        "fullName": "Brian Sinclair",
+        "headline": "Staff Software Engineer, Ex-Block/Indeed/DigitalOcean",
+        "profileUrl": "https://www.linkedin.com/in/brianarn/",
+        "dateConnected": "2015-11-02"
+      },
+      {
+        "fullName": "Dustin Laycock",
+        "headline": "Senior Recruiting Manager @ Bestow | B.S. in Leadership Development",
+        "profileUrl": "https://www.linkedin.com/in/dustinlaycock/",
+        "dateConnected": "2015-10-30"
+      },
+      {
+        "fullName": "Anandan Narayanaswamy",
+        "headline": "AWS Cloud Architect | AWS Cloud Engineer | AWS DevOps Engineer | Artificial Intelligence | Finance",
+        "profileUrl": "https://www.linkedin.com/in/anandan-n/",
+        "dateConnected": "2015-10-30"
+      },
+      {
+        "fullName": "Sunme Rugh",
+        "headline": "IBP & Process Excellence Director- Orthopedic Supply Planning",
+        "profileUrl": "https://www.linkedin.com/in/sunme-rugh-91275584/",
+        "dateConnected": "2015-09-22"
+      },
+      {
+        "fullName": "Tom Nunamaker",
+        "headline": "President at Aeromir Corporation",
+        "profileUrl": "https://www.linkedin.com/in/tom-nunamaker-926b7b105/",
+        "dateConnected": "2015-09-21"
+      },
+      {
+        "fullName": "Albert Morlan",
+        "headline": "Senior Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/albert-morlan-902a318b/",
+        "dateConnected": "2015-09-15"
+      },
+      {
+        "fullName": "Morgan Hancock",
+        "headline": "Principal Product Designer",
+        "profileUrl": "https://www.linkedin.com/in/morgan-hancock/",
+        "dateConnected": "2015-09-09"
+      },
+      {
+        "fullName": "Ramadass Prabhakar",
+        "headline": "Chief Technology Officer @ WP Engine",
+        "profileUrl": "https://www.linkedin.com/in/ramadassprabhakar/",
+        "dateConnected": "2015-09-04"
+      },
+      {
+        "fullName": "Molly Kroker",
+        "headline": "Deployment Coordinator @ ZEISS Industrial Quality Solutions | MA in Chinese Policy History",
+        "profileUrl": "https://www.linkedin.com/in/molly-k-13814883/",
+        "dateConnected": "2015-08-17"
+      },
+      {
+        "fullName": "Paul K. Olive",
+        "headline": "Solution Delivery Manager",
+        "profileUrl": "https://www.linkedin.com/in/paulolive/",
+        "dateConnected": "2015-07-30"
+      },
+      {
+        "fullName": "Mike Rowell, PMP",
+        "headline": "Owner, Semper Fi Tree Service",
+        "profileUrl": "https://www.linkedin.com/in/rowellmike/",
+        "dateConnected": "2015-07-20"
+      },
+      {
+        "fullName": "Ricky Gutierrez",
+        "headline": "Interventional Radiologic Technologist at St. Joseph Medical Center",
+        "profileUrl": "https://www.linkedin.com/in/ricky-gutierrez-671957101/",
+        "dateConnected": "2015-07-18"
+      },
+      {
+        "fullName": "Jesse Vera",
+        "headline": "(He/him) Customer-focused and outgoing engineer who loves solving problems with software",
+        "profileUrl": "https://www.linkedin.com/in/jevera/",
+        "dateConnected": "2015-07-13"
+      },
+      {
+        "fullName": "Patrick Tully",
+        "headline": "Building and developing a world class technical program team at ŌURA",
+        "profileUrl": "https://www.linkedin.com/in/1patricktully/",
+        "dateConnected": "2015-06-03"
+      },
+      {
+        "fullName": "Erik Kinservik",
+        "headline": "Empowering Leader | Technology Innovator | Process Optimizer | Relationship Builder | Business Developer | Former Amazon",
+        "profileUrl": "https://www.linkedin.com/in/ekinservik/",
+        "dateConnected": "2015-05-28"
+      },
+      {
+        "fullName": "Perry Shuman",
+        "headline": "Senior Engineer at Zenbusiness",
+        "profileUrl": "https://www.linkedin.com/in/perry-shuman-5b5a4332/",
+        "dateConnected": "2015-05-13"
+      },
+      {
+        "fullName": "Irene Dhong",
+        "headline": "Software Development Manager, Adobe GenStudio",
+        "profileUrl": "https://www.linkedin.com/in/irene-dhong-4487935/",
+        "dateConnected": "2015-05-13"
+      },
+      {
+        "fullName": "Nick Hopkins",
+        "headline": "Senior UX Designer - Design Systems",
+        "profileUrl": "https://www.linkedin.com/in/hopkinsdesign/",
+        "dateConnected": "2015-05-13"
+      },
+      {
+        "fullName": "Dan Heberden",
+        "headline": "VP of Engineering & Operations at DailyPay",
+        "profileUrl": "https://www.linkedin.com/in/danheberden/",
+        "dateConnected": "2015-05-13"
+      },
+      {
+        "fullName": "Kurtis White",
+        "headline": "Senior Director of Engineering at Indeed.com",
+        "profileUrl": "https://www.linkedin.com/in/kurtis-white/",
+        "dateConnected": "2015-05-13"
+      },
+      {
+        "fullName": "Oren Fisk",
+        "headline": "Sr EM @ Q2’s Innovation Studio | Building Loresmith.ai for AI-powered tabletop RPG campaign planning",
+        "profileUrl": "https://www.linkedin.com/in/orenfisk/",
+        "dateConnected": "2015-05-13"
+      },
+      {
+        "fullName": "Deven Hariyani",
+        "headline": "Product @ Amazon",
+        "profileUrl": "https://www.linkedin.com/in/devenhariyani/",
+        "dateConnected": "2015-05-11"
+      },
+      {
+        "fullName": "Michael Cheng",
+        "headline": "Front-end engineer at Square",
+        "profileUrl": "https://www.linkedin.com/in/michaelwcheng/",
+        "dateConnected": "2015-05-08"
+      },
+      {
+        "fullName": "Sean Lackey",
+        "headline": "Product Lifecycle Management Technology @ H-E-B",
+        "profileUrl": "https://www.linkedin.com/in/sean-lackey-711b957/",
+        "dateConnected": "2015-03-28"
+      },
+      {
+        "fullName": "Arby Hinojosa",
+        "headline": "REALTOR® / Broker Associate at Realty Austin",
+        "profileUrl": "https://www.linkedin.com/in/arby-hinojosa-6241b11/",
+        "dateConnected": "2014-11-12"
+      },
+      {
+        "fullName": "Christopher Bigley",
+        "headline": "Principal Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/christopherbigley/",
+        "dateConnected": "2014-11-08"
+      },
+      {
+        "fullName": "Kelly Evans",
+        "headline": "Husband • Father • Engineering Leader • Platform Thinker • Culture Builder • AI Explorer • Believer In A Better Way",
+        "profileUrl": "https://www.linkedin.com/in/kellyevans/",
+        "dateConnected": "2014-11-08"
+      },
+      {
+        "fullName": "🙅‍♂️Emmanuel Pamintuan Jr.",
+        "headline": "Full-Time Friend & Staff Software Engineer (GraphQL+Node.js)",
+        "profileUrl": "https://www.linkedin.com/in/mannypamintuan/",
+        "dateConnected": "2014-09-09"
+      },
+      {
+        "fullName": "Alex Zelenak",
+        "headline": "Product Design, UI/UX",
+        "profileUrl": "https://www.linkedin.com/in/alexzelenak/",
+        "dateConnected": "2014-09-01"
+      },
+      {
+        "fullName": "Dusty Herrman",
+        "headline": "Staff Software Engineer | Technical Leader in Distributed Systems, Cloud Platforms, & High-Throughput Architecture",
+        "profileUrl": "https://www.linkedin.com/in/dustyherrman/",
+        "dateConnected": "2014-08-22"
+      },
+      {
+        "fullName": "Michael Estrada",
+        "headline": "Director, Customer Deal Desk at Oracle",
+        "profileUrl": "https://www.linkedin.com/in/michael-e-estrada/",
+        "dateConnected": "2014-08-04"
+      },
+      {
+        "fullName": "Jason Roberts",
+        "headline": "DevOps Guru",
+        "profileUrl": "https://www.linkedin.com/in/jason-roberts-devops/",
+        "dateConnected": "2014-07-16"
+      },
+      {
+        "fullName": "Tiff Ting",
+        "headline": "Product innovator fighting climate change | Software industry veteran of many hats 🎩",
+        "profileUrl": "https://www.linkedin.com/in/tiffting/",
+        "dateConnected": "2014-06-25"
+      },
+      {
+        "fullName": "Tom Hicks",
+        "headline": "Computer Science Prof at Trinity University",
+        "profileUrl": "https://www.linkedin.com/in/tom-hicks-52732244/",
+        "dateConnected": "2014-06-18"
+      },
+      {
+        "fullName": "Amanda Le",
+        "headline": "Data Engineer at Meta",
+        "profileUrl": "https://www.linkedin.com/in/amandadle/",
+        "dateConnected": "2014-06-15"
+      },
+      {
+        "fullName": "Mallory Farrimond Burnside",
+        "headline": "Director, H-E-B Own Brand ",
+        "profileUrl": "https://www.linkedin.com/in/mallory-farrimond-burnside-06692a7b/",
+        "dateConnected": "2014-05-04"
+      },
+      {
+        "fullName": "Ralph Horrell",
+        "headline": "Head of Application and Infrastructure Security; also Bee Rancher",
+        "profileUrl": "https://www.linkedin.com/in/ralph-horrell/",
+        "dateConnected": "2014-05-01"
+      },
+      {
+        "fullName": "Triest Smart",
+        "headline": "Lead Android Developer at Spotlight Media Labs, Inc.",
+        "profileUrl": "https://www.linkedin.com/in/triestmsmart/",
+        "dateConnected": "2014-05-01"
+      },
+      {
+        "fullName": "Amanda Nunamaker",
+        "headline": "Customer Support Specialist | Remote Operations & Team Lead | Zendesk & Salesforce Proficient",
+        "profileUrl": "https://www.linkedin.com/in/amanda-nunamaker-78683993/",
+        "dateConnected": "2014-04-25"
+      },
+      {
+        "fullName": "Ashwini Achar",
+        "headline": "Computer Scientist at Adobe",
+        "profileUrl": "https://www.linkedin.com/in/ashwiniachar/",
+        "dateConnected": "2014-04-23"
+      },
+      {
+        "fullName": "Sean Bellew",
+        "headline": "TA Partner at USAA",
+        "profileUrl": "https://www.linkedin.com/in/seanbellew/",
+        "dateConnected": "2014-04-21"
+      },
+      {
+        "fullName": "Jenn Byron Ross",
+        "headline": "VP Talent Management @ Sprouts | Leadership Coach",
+        "profileUrl": "https://www.linkedin.com/in/jennbyronross/",
+        "dateConnected": "2014-03-10"
+      },
+      {
+        "fullName": "James Tippets",
+        "headline": "Senior Staff Product Manager, Commercial Programs and Offers at Databricks; Ex-Google; Ex-McKinsey",
+        "profileUrl": "https://www.linkedin.com/in/jamestippets/",
+        "dateConnected": "2014-02-15"
+      },
+      {
+        "fullName": "Joshua McWilliams",
+        "headline": "Lead Android Mobile Engineer at USAA",
+        "profileUrl": "https://www.linkedin.com/in/joshua-mcwilliams/",
+        "dateConnected": "2014-02-11"
+      },
+      {
+        "fullName": "Jamieson Brettle",
+        "headline": "Product @ Google | Advisor | Angel Investor",
+        "profileUrl": "https://www.linkedin.com/in/jamiesonbrettle/",
+        "dateConnected": "2014-01-21"
+      },
+      {
+        "fullName": "Jaime Thomas",
+        "headline": "Luxury Travel Advisor",
+        "profileUrl": "https://www.linkedin.com/in/jthomasconsulting/",
+        "dateConnected": "2014-01-11"
+      },
+      {
+        "fullName": "Marcia Meer",
+        "headline": "Informatics pharmacist at St. David's North Austin Medical Center",
+        "profileUrl": "https://www.linkedin.com/in/marcia-meer-7a199236/",
+        "dateConnected": "2014-01-10"
+      },
+      {
+        "fullName": "Ben Coffey",
+        "headline": "Energy Infrastructure",
+        "profileUrl": "https://www.linkedin.com/in/coffeyb/",
+        "dateConnected": "2014-01-08"
+      },
+      {
+        "fullName": "Marsha Faichtinger",
+        "headline": "at HEB",
+        "profileUrl": "https://www.linkedin.com/in/marsha-faichtinger/",
+        "dateConnected": "2014-01-06"
+      },
+      {
+        "fullName": "Sara Kluss",
+        "headline": "Fashion Designer 👗👠💄 | Owner and Designer of Alicia Miranda and Co-Owner Fragile Eccentrics | Vintage Fashion Lover 😍 | Fashion but.....make it vintage 👗",
+        "profileUrl": "https://www.linkedin.com/in/sara-kluss-01608628/",
+        "dateConnected": "2014-01-06"
+      },
+      {
+        "fullName": "Isaac Castillo",
+        "headline": "Full Stack Developer",
+        "profileUrl": "https://www.linkedin.com/in/isaaccastillo/",
+        "dateConnected": "2013-12-14"
+      },
+      {
+        "fullName": "Chaney Fonseca",
+        "headline": "Senior Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/chaneyfonseca/",
+        "dateConnected": "2013-11-02"
+      },
+      {
+        "fullName": "Oluwatobi Adeyinka, E.I.T.",
+        "headline": "Environmental Team Lead at Chevron Phillips Chemical Company",
+        "profileUrl": "https://www.linkedin.com/in/oluwatobi-adeyinka-e-i-t-80b4b29/",
+        "dateConnected": "2013-10-29"
+      },
+      {
+        "fullName": "Chris Pound",
+        "headline": "Staff Software Developer",
+        "profileUrl": "https://www.linkedin.com/in/poundchris/",
+        "dateConnected": "2013-10-11"
+      },
+      {
+        "fullName": "Youming Liang",
+        "headline": "Sr Engineering Manager at Alibaba",
+        "profileUrl": "https://www.linkedin.com/in/youmingliang/",
+        "dateConnected": "2013-10-04"
+      },
+      {
+        "fullName": "Jared Martinez",
+        "headline": "Technical Lead & Staff Software Engineer at H-E-B",
+        "profileUrl": "https://www.linkedin.com/in/jared-martinez-0041a248/",
+        "dateConnected": "2013-09-23"
+      },
+      {
+        "fullName": "Srinivasa R Venkataramani",
+        "headline": "Vice President of Engineering at Solera",
+        "profileUrl": "https://www.linkedin.com/in/svenkataramani/",
+        "dateConnected": "2013-09-17"
+      },
+      {
+        "fullName": "Ansell Chiu",
+        "headline": "Product Designer • Tech for Public Good",
+        "profileUrl": "https://www.linkedin.com/in/ansellchiu/",
+        "dateConnected": "2013-09-16"
+      },
+      {
+        "fullName": "Craig McKinney",
+        "headline": "Talent Attraction @ Elicit.com, AI for Scientific Research",
+        "profileUrl": "https://www.linkedin.com/in/craigmckinney/",
+        "dateConnected": "2013-08-22"
+      },
+      {
+        "fullName": "Gary Deer",
+        "headline": "San Antonio area Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/gdeer/",
+        "dateConnected": "2013-08-20"
+      },
+      {
+        "fullName": "Shawn Wayne Jones",
+        "headline": "Territory Manager at FS Blinds, LLC, an FS Builder Resources company",
+        "profileUrl": "https://www.linkedin.com/in/shawnwaynejones/",
+        "dateConnected": "2013-08-14"
+      },
+      {
+        "fullName": "Ivan PopGruev, BEng, MBA",
+        "headline": "Capital Markets / Project Development / Asset Management",
+        "profileUrl": "https://www.linkedin.com/in/ivanpop/",
+        "dateConnected": "2013-08-13"
+      },
+      {
+        "fullName": "Mark Cunningham",
+        "headline": "Owner and Technical Recruiter at The Bidding Network",
+        "profileUrl": "https://www.linkedin.com/in/markhc/",
+        "dateConnected": "2013-08-06"
+      },
+      {
+        "fullName": "Eric Stiles",
+        "headline": "Lead Consultant at Thoughtworks",
+        "profileUrl": "https://www.linkedin.com/in/ericstiles/",
+        "dateConnected": "2013-08-05"
+      },
+      {
+        "fullName": "Douglas Mendizábal",
+        "headline": "Senior Software Engineer at Red Hat",
+        "profileUrl": "https://www.linkedin.com/in/dougmendizabal/",
+        "dateConnected": "2013-07-16"
+      },
+      {
+        "fullName": "Brennan Nunamaker",
+        "headline": "Committed to Excellence in Software & Business",
+        "profileUrl": "https://www.linkedin.com/in/brennan-nunamaker-30657a70/",
+        "dateConnected": "2013-07-16"
+      },
+      {
+        "fullName": "Ghazal Montazeri",
+        "headline": "Senior Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/ghazal-montazeri-b872352b/",
+        "dateConnected": "2013-07-16"
+      },
+      {
+        "fullName": "Edgar Garcia",
+        "headline": "Software Developer at H-E-B",
+        "profileUrl": "https://www.linkedin.com/in/edgar-garcia-59a01643/",
+        "dateConnected": "2013-07-11"
+      },
+      {
+        "fullName": "Stephen Rugh",
+        "headline": "Adobe Commerce Frontend Architect",
+        "profileUrl": "https://www.linkedin.com/in/stephenrugh/",
+        "dateConnected": "2013-07-02"
+      },
+      {
+        "fullName": "Nickolas Chea",
+        "headline": "Manager Enterprise System Dev Eng at Valero Energy Corporation",
+        "profileUrl": "https://www.linkedin.com/in/nickolas-chea-47988250/",
+        "dateConnected": "2013-07-02"
+      },
+      {
+        "fullName": "Ryan Dawson",
+        "headline": "Lead .Net Developer at Ethos Group",
+        "profileUrl": "https://www.linkedin.com/in/charlesryandawson/",
+        "dateConnected": "2013-06-03"
+      },
+      {
+        "fullName": "Thomas Hicks",
+        "headline": "Computer Science Prof at Trinity University",
+        "profileUrl": "https://www.linkedin.com/in/thomas-hicks-a4154844/",
+        "dateConnected": "2013-06-02"
+      },
+      {
+        "fullName": "Justin Turner",
+        "headline": "Managing Director of Software Engineering | Engineering Executive | AI & ML Strategy | Transforming Legacy Systems at Multi-Billion Dollar Scale",
+        "profileUrl": "https://www.linkedin.com/in/justinturnerdev/",
+        "dateConnected": "2013-05-16"
+      },
+      {
+        "fullName": "Peter Walker",
+        "headline": "Managing Director and global head of the Quartz Core Business Platform.",
+        "profileUrl": "https://www.linkedin.com/in/peterbwalker/",
+        "dateConnected": "2013-04-25"
+      },
+      {
+        "fullName": "Mike Estrada",
+        "headline": "Software Engineer. Real Estate Investor.",
+        "profileUrl": "https://www.linkedin.com/in/mike-estrada/",
+        "dateConnected": "2013-04-21"
+      },
+      {
+        "fullName": "Anastasia Myronenko",
+        "headline": "Recruiting Consultant | Technical Recruiter | Recruiting Product | Cambridge MBA",
+        "profileUrl": "https://www.linkedin.com/in/anastaciaforte/",
+        "dateConnected": "2013-03-20"
+      },
+      {
+        "fullName": "Larry Hechler",
+        "headline": "Technical Support Analyst at Trinity University",
+        "profileUrl": "https://www.linkedin.com/in/larry-hechler-ba157467/",
+        "dateConnected": "2013-03-18"
+      },
+      {
+        "fullName": "Matthew Maly",
+        "headline": "Staff Software Engineer at Google",
+        "profileUrl": "https://www.linkedin.com/in/matthew-maly-3759268/",
+        "dateConnected": "2012-12-17"
+      },
+      {
+        "fullName": "Justin Carreon",
+        "headline": "Data Engineer at Indeed.com",
+        "profileUrl": "https://www.linkedin.com/in/justincarreon/",
+        "dateConnected": "2012-12-06"
+      },
+      {
+        "fullName": "Kaitlyn Allen",
+        "headline": "Serial Entrepreneur | Sustainability Innovator | Coach",
+        "profileUrl": "https://www.linkedin.com/in/kaitlyn-allen-sustainability/",
+        "dateConnected": "2012-11-16"
+      },
+      {
+        "fullName": "Nathan Rhodes",
+        "headline": "Talent @ Square",
+        "profileUrl": "https://www.linkedin.com/in/nathanrhodes/",
+        "dateConnected": "2012-10-06"
+      },
+      {
+        "fullName": "Alison Turner Telles",
+        "headline": "Experienced Product Marketing Leader | Building Strong Product Marketing Teams",
+        "profileUrl": "https://www.linkedin.com/in/alisonaturner/",
+        "dateConnected": "2012-10-06"
+      },
+      {
+        "fullName": "Carolyn Lawson",
+        "headline": "Product Owner/Analyst at HEB",
+        "profileUrl": "https://www.linkedin.com/in/carolyn-lawson-9268005/",
+        "dateConnected": "2012-09-27"
+      },
+      {
+        "fullName": "Roberta McCarter",
+        "headline": "Founder & CEO @ Novus Data Journeys | AI Readiness Evangelist, Data Strategies",
+        "profileUrl": "https://www.linkedin.com/in/robertamccarter/",
+        "dateConnected": "2012-09-27"
+      },
+      {
+        "fullName": "Allen Torng",
+        "headline": "Senior IP Counsel at Southwire Company",
+        "profileUrl": "https://www.linkedin.com/in/allentorng/",
+        "dateConnected": "2012-09-16"
+      },
+      {
+        "fullName": "Luis Moreno",
+        "headline": "Enhancing Executive Performance & Helping Clients Solve Complex Business Challenges",
+        "profileUrl": "https://www.linkedin.com/in/luis-moreno-65b2483a/",
+        "dateConnected": "2012-08-15"
+      },
+      {
+        "fullName": "Kelsey Wise",
+        "headline": "Apprentice at The Brandt Companies",
+        "profileUrl": "https://www.linkedin.com/in/kelsey-wise-69b4b656/",
+        "dateConnected": "2012-08-10"
+      },
+      {
+        "fullName": "Michael Murphy",
+        "headline": "Senior Manager of the Program Management Office (PMO) | Program and Project Management | Agile Transformation | PSM-II Scrum Master and Agile Coach | Business Analysis and Business Process Modeling | PMO Leadership",
+        "profileUrl": "https://www.linkedin.com/in/michaeljmurphylink/",
+        "dateConnected": "2012-07-18"
+      },
+      {
+        "fullName": "Steve Salinas",
+        "headline": "Regional Solution Sales Director at Computacenter US",
+        "profileUrl": "https://www.linkedin.com/in/steve-s-555a141/",
+        "dateConnected": "2012-05-31"
+      },
+      {
+        "fullName": "Alberto Lopez",
+        "headline": "Staff iOS Engineer - at H-E-B",
+        "profileUrl": "https://www.linkedin.com/in/alberto-lopez-93879735/",
+        "dateConnected": "2012-05-16"
+      },
+      {
+        "fullName": "Ryan Olson",
+        "headline": "Customer Success Manager at Salesforce",
+        "profileUrl": "https://www.linkedin.com/in/rdolson/",
+        "dateConnected": "2012-05-14"
+      },
+      {
+        "fullName": "Easwar Katipalli",
+        "headline": "Technical Program Manager  | Technical Project Manager  | Technical Operations Manager | Technical Product Manager  | Technical Product Owner | CSM | CSPO | J2EE | Angular",
+        "profileUrl": "https://www.linkedin.com/in/easwar-katipalli-a379865/",
+        "dateConnected": "2012-05-10"
+      },
+      {
+        "fullName": "Dale Kocian",
+        "headline": "Lead Software Developer at USAA",
+        "profileUrl": "https://www.linkedin.com/in/dale-kocian-00541321/",
+        "dateConnected": "2012-05-01"
+      },
+      {
+        "fullName": "Mark Webb",
+        "headline": "Project Manager (PMP) at H-E-B Grocery Co.",
+        "profileUrl": "https://www.linkedin.com/in/mark-webb-ab98518/",
+        "dateConnected": "2012-04-23"
+      },
+      {
+        "fullName": "Margo Hale",
+        "headline": "Sr. Director, IT",
+        "profileUrl": "https://www.linkedin.com/in/margo-hale-63283a7/",
+        "dateConnected": "2012-04-22"
+      },
+      {
+        "fullName": "Angelica Bryant",
+        "headline": "Data-Driven Engineer",
+        "profileUrl": "https://www.linkedin.com/in/angelica-bryant-a29a2a25/",
+        "dateConnected": "2012-04-22"
+      },
+      {
+        "fullName": "Marc Trumm",
+        "headline": "Lead Software Developer at HEB",
+        "profileUrl": "https://www.linkedin.com/in/marc-trumm-8485682/",
+        "dateConnected": "2012-04-21"
+      },
+      {
+        "fullName": "Paul White",
+        "headline": "Expert Research Scientist (NMR) at NMX Research and Solutions Inc",
+        "profileUrl": "https://www.linkedin.com/in/paul-white-48341650/",
+        "dateConnected": "2012-04-20"
+      },
+      {
+        "fullName": "Paul Myers",
+        "headline": "Caruth Professor of Computing & Information Science at Trinity University",
+        "profileUrl": "https://www.linkedin.com/in/paul-myers-2b6a073/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Brad Poynter",
+        "headline": "Leader, Innovator, Team Builder, Problem Solver, Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/bradpoynter/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Carrie White",
+        "headline": "Data Management Analyst at Security Service Federal Credit Union",
+        "profileUrl": "https://www.linkedin.com/in/carrie-white-71492611/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Mark Lewis",
+        "headline": "Senior SDE",
+        "profileUrl": "https://www.linkedin.com/in/drmarkclewis/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Patrick Walther",
+        "headline": "Chief Technology Officer",
+        "profileUrl": "https://www.linkedin.com/in/patrickjwalther/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Shane Richard",
+        "headline": "Senior Enterprise Architect at Frost Bank",
+        "profileUrl": "https://www.linkedin.com/in/shane-richard-ba3757b/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Mark Purugganan",
+        "headline": "Software Developer",
+        "profileUrl": "https://www.linkedin.com/in/mpurugganan/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Danny Carroll",
+        "headline": "IT Technical Director at USAA",
+        "profileUrl": "https://www.linkedin.com/in/danny-carroll-8abb043/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Kevin Nickels",
+        "headline": "Associate Professor at Trinity University",
+        "profileUrl": "https://www.linkedin.com/in/kevin-nickels-684440/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Randy Le",
+        "headline": "Software Engineer | UTSA Roadrunner | Always learning",
+        "profileUrl": "https://www.linkedin.com/in/randy-le-00b27245/",
+        "dateConnected": "2012-04-19"
+      },
+      {
+        "fullName": "Cindy Scott",
+        "headline": "Sr. Director Of Engineering, Partner Solutions Engineering at H-E-B",
+        "profileUrl": "https://www.linkedin.com/in/cindy-scott-99755b3a/",
+        "dateConnected": "2012-04-18"
+      },
+      {
+        "fullName": "Emily Dudley",
+        "headline": "Auctioneer at Dudley's Auction",
+        "profileUrl": "https://www.linkedin.com/in/emily-dudley-33107b4b/",
+        "dateConnected": "2012-03-31"
+      },
+      {
+        "fullName": "Ian Foti-Landis",
+        "headline": "SBIR/STTR Coordinator at Los Alamos National Laboratory",
+        "profileUrl": "https://www.linkedin.com/in/ian-foti-landis-13191414/",
+        "dateConnected": "2012-03-27"
+      },
+      {
+        "fullName": "Victor Baca",
+        "headline": "Lead Software Engineer at USAA",
+        "profileUrl": "https://www.linkedin.com/in/victorbaca/",
+        "dateConnected": "2012-03-10"
+      },
+      {
+        "fullName": "Ryan Young",
+        "headline": "iOS Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/ryan-young-546b816/",
+        "dateConnected": "2012-01-12"
+      },
+      {
+        "fullName": "Derek Haynes",
+        "headline": "Senior Principal Software Engineer @ Red Hat",
+        "profileUrl": "https://www.linkedin.com/in/derekchaynes/",
+        "dateConnected": "2012-01-11"
+      },
+      {
+        "fullName": "Erik Marcus Fredrik Pemer",
+        "headline": "Technology Leader | 30 Yrs Experience – 20 Yrs Building Complex Software Systems | Scrum.org Certified (PSM I & II, PSPO I & II, PAL I)",
+        "profileUrl": "https://www.linkedin.com/in/marcuspemer/",
+        "dateConnected": "2012-01-01"
+      },
+      {
+        "fullName": "Gustavo Cantu",
+        "headline": "Senior Developer at HEB",
+        "profileUrl": "https://www.linkedin.com/in/gcantu2/",
+        "dateConnected": "2011-10-18"
+      },
+      {
+        "fullName": "Wes Straw",
+        "headline": "M&A PSA Integration Specialist at Meriplex Communications",
+        "profileUrl": "https://www.linkedin.com/in/wes-straw-33b43736/",
+        "dateConnected": "2011-06-27"
+      },
+      {
+        "fullName": "Gerald Halbeisen",
+        "headline": "Software Engineer",
+        "profileUrl": "https://www.linkedin.com/in/gerald-halbeisen-6036427/",
+        "dateConnected": "2011-06-17"
+      },
+      {
+        "fullName": "Cathy Cleek",
+        "headline": "Working to help government do good!",
+        "profileUrl": "https://www.linkedin.com/in/cathycleek/",
+        "dateConnected": "2011-06-17"
+      },
+      {
+        "fullName": "Scott Wild",
+        "headline": "I help founders of 5–150 person companies with one work relationship they keep arguing about in their head, so they know what to say and can actually have the conversation.",
+        "profileUrl": "https://www.linkedin.com/in/scottsolowild/",
+        "dateConnected": "2010-11-05"
+      },
+      {
+        "fullName": "Spencer Nunamaker",
+        "headline": "Marketing Specialist, Creative Strategist, Sr. Graphic Designer",
+        "profileUrl": "https://www.linkedin.com/in/spencer-nunamaker/",
+        "dateConnected": "2010-06-22"
+      },
+      {
+        "fullName": "Jon Simpkins, PhD",
+        "headline": "Senior Software Engineer at Google",
+        "profileUrl": "https://www.linkedin.com/in/jon-simpkins-phd-a701418/",
+        "dateConnected": "2010-06-09"
+      },
+      {
+        "fullName": "Susan Sun Nunamaker",
+        "headline": "Math Professor & Coach |Solar & Sustainable Living Advocate|Community Business/Organization Connector & Promoter",
+        "profileUrl": "https://www.linkedin.com/in/susan-sun-nunamaker-27977117/",
+        "dateConnected": "2010-06-09"
+      },
+      {
+        "fullName": "Karla Gross",
+        "headline": "Senior Engineering Manager at H-E-B",
+        "profileUrl": "https://www.linkedin.com/in/karla-gross/",
+        "dateConnected": "2010-03-03"
+      },
+      {
+        "fullName": "William Kluss",
+        "headline": "Senior Software Engineering Manager @ Expedia Group",
+        "profileUrl": "https://www.linkedin.com/in/wkluss/",
+        "dateConnected": "2010-01-25"
+      },
+      {
+        "fullName": "",
+        "headline": "",
+        "profileUrl": "",
+        "dateConnected": "2009-07-15"
+      },
+      {
+        "fullName": "Claralynn Nunamaker",
+        "headline": "Clarelynn Rose guitar",
+        "profileUrl": "https://www.linkedin.com/in/claralynn-nunamaker-1a096613/",
+        "dateConnected": "2009-06-18"
+      },
+      {
+        "fullName": "Adam Sanchez-Guerrero",
+        "headline": "Hulu",
+        "profileUrl": "https://www.linkedin.com/in/adamsanchezguerrero/",
+        "dateConnected": "2009-03-31"
+      },
+      {
+        "fullName": "Fernanda Zapata",
+        "headline": "GIGANTEM Founder/President | Marketing and Communications Professional | Event Producer | Content Creator",
+        "profileUrl": "https://www.linkedin.com/in/fernandazapata/",
+        "dateConnected": "2009-03-31"
+      },
+      {
+        "fullName": "Paul Calvin",
+        "headline": "Luxury & Lifestyle Hotel Director of Sales & Marketing  //  Hotel Opening Specialist",
+        "profileUrl": "https://www.linkedin.com/in/paulcalvin/",
+        "dateConnected": "2009-03-11"
+      },
+      {
+        "fullName": "Zain Shamsi",
+        "headline": "Cyber Security / Machine Learning Researcher",
+        "profileUrl": "https://www.linkedin.com/in/zainshamsi/",
+        "dateConnected": "2009-03-05"
+      },
+      {
+        "fullName": "Robert Danhof",
+        "headline": "Enterprise Software Developer at GM Financial",
+        "profileUrl": "https://www.linkedin.com/in/redace0/",
+        "dateConnected": "2009-03-05"
+      },
+      {
+        "fullName": "Robert Harl",
+        "headline": "President, Manager, Founder, Head of Brewing Operations at Back Pew Brewing Company",
+        "profileUrl": "https://www.linkedin.com/in/robert-harl-3aba2211/",
+        "dateConnected": "2009-03-05"
+      }
+    ]
+  },
+  "exportSummary": {
+    "count": 375,
+    "label": "items",
+    "details": "1 profile, 6 experiences, 1 education, 16 skills, 1 languages, 350 connections (345 with profiles)"
+  },
+  "timestamp": "2026-03-27T13:07:46.174Z",
+  "version": "1.0.0-playwright",
+  "platform": "linkedin"
+}
