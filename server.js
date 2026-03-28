@@ -90,6 +90,33 @@ function processData() {
   const sortedHours = Object.entries(hoursCT).sort((a, b) => b[1] - a[1]);
   const peakHour = sortedHours[0] ? +sortedHours[0][0] : 0;
 
+  // Deep details — specific moments that make this personal
+  const deepDetails = [];
+  for (const cv of recentConvos) {
+    const convo = convos.find(c => c.title === cv.title);
+    if (!convo || !convo.messages || convo.messages.length === 0) continue;
+    const userMsgs = convo.messages.filter(m => m.role === 'user');
+    if (userMsgs.length === 0) continue;
+    const firstQ = userMsgs[0].content;
+    if (!firstQ || firstQ.length < 10) continue;
+    // Get the hour in CT
+    let hourCT = null;
+    try {
+      const created = new Date(convo.create_time);
+      hourCT = (created.getUTCHours() - 5 + 24) % 24;
+    } catch {}
+    deepDetails.push({
+      title: cv.title,
+      firstQuestion: firstQ.slice(0, 200),
+      hour: hourCT,
+      model: convo.messages.find(m => m.model)?.model || null,
+      messageCount: cv.messageCount,
+    });
+  }
+  // Pick the most emotionally interesting ones
+  const lateNightDetails = deepDetails.filter(d => d.hour !== null && (d.hour >= 22 || d.hour < 6));
+  const deepestConvo = deepDetails.sort((a, b) => b.messageCount - a.messageCount)[0] || null;
+
   // GitHub
   const gh = loadJSON('github.json');
   const repos = gh?.repositories || [];
@@ -233,6 +260,9 @@ function processData() {
       themeCounts, themedTitles: Object.fromEntries(Object.entries(themedTitles).map(([k, v]) => [k, v.slice(0, 5)])),
       memories: memories.length,
       recentConvos: recentConvos.sort((a, b) => b.created.localeCompare(a.created)).slice(0, 15),
+      deepDetails: deepDetails.slice(0, 8),
+      lateNightDetails: lateNightDetails.slice(0, 3),
+      deepestConvo,
     },
     github: {
       profile: { username: ghProfile.username, fullName: ghProfile.fullName, followers: ghProfile.followers, repoCount: ghProfile.repositoryCount },
