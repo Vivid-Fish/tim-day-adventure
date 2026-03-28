@@ -6,13 +6,6 @@
 <title>Tim's Week</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
-/*
-  Design system:
-  - Warm (rose #f43f5e): personal, family, parenting
-  - Cool (blue #6366f1): technical, engineering, AI
-  - Neutral: everything else — no color, just opacity
-  - One hero moment. Supporting evidence below. Whitespace is structure.
-*/
 :root {
   --bg: #09090b;
   --warm: #f43f5e;
@@ -31,57 +24,80 @@ body {
 }
 .page { max-width: 480px; margin: 0 auto; padding: 0 24px; }
 
-/* ── Label: the only recurring typographic element ── */
 .label {
   font-size: 11px; font-weight: 500; letter-spacing: 1.5px;
   text-transform: uppercase; color: rgba(250,250,250,0.22);
 }
 
-/* ── Hero: the emotional center ── */
+/* Hero: pull quote */
 .hero {
-  padding: 56px 0 0;
+  padding: 72px 0 0;
   text-align: center;
 }
-.hero .label { margin-bottom: 20px; }
-.hero-split {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 32px;
-  margin-bottom: 12px;
-}
-.hero-side { text-align: center; }
-.hero-num {
-  font-size: 64px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -2px;
-}
-.hero-cat {
-  font-size: 13px;
-  font-weight: 500;
-  margin-top: 4px;
-}
-.hero-vs {
-  font-size: 13px;
-  font-weight: 400;
-  color: rgba(250,250,250,0.15);
-  padding-bottom: 16px;
-}
-.hero-sub {
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.6;
-  max-width: 360px;
+.hero .label { margin-bottom: 24px; }
+.hero-quote {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(250,250,250,0.45);
+  max-width: 380px;
   margin: 0 auto;
 }
-
-/* ── Section spacing ── */
-.section {
-  padding: 48px 0 0;
+.hero-quote .warm { color: var(--warm); font-weight: 500; }
+.hero-quote .cool { color: var(--cool); font-weight: 500; }
+.stat-line {
+  margin-top: 24px;
+  font-size: 13px;
+  color: rgba(250,250,250,0.18);
+  letter-spacing: 0.5px;
+}
+.stat-line span {
+  margin: 0 6px;
 }
 
-/* ── Hour chart ── */
+/* Section spacing */
+.section { padding: 56px 0 0; }
+
+/* Theme bars */
+.theme-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+.theme-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.theme-name {
+  font-size: 13px;
+  font-weight: 500;
+  width: 140px;
+  flex-shrink: 0;
+  color: rgba(250,250,250,0.55);
+}
+.theme-track {
+  flex: 1;
+  height: 8px;
+  background: var(--faint);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.theme-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+.theme-count {
+  font-size: 13px;
+  font-weight: 600;
+  width: 28px;
+  text-align: right;
+  color: rgba(250,250,250,0.4);
+}
+
+/* Hour chart */
+.hour-chart { position: relative; }
 .hours {
   display: flex;
   align-items: flex-end;
@@ -95,16 +111,6 @@ body {
   position: relative;
   min-width: 0;
 }
-.hours .bar.has-val::after {
-  content: attr(data-v);
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 9px;
-  font-weight: 600;
-  color: rgba(250,250,250,0.3);
-}
 .hour-axis {
   display: flex;
   font-size: 9px;
@@ -112,101 +118,62 @@ body {
   margin-bottom: 12px;
 }
 .hour-axis span { flex: 1; text-align: center; }
-.hour-note {
+.hour-annotation {
   font-size: 13px;
   color: var(--muted);
   line-height: 1.5;
 }
-.hour-note strong { color: rgba(250,250,250,0.7); font-weight: 600; }
+.hour-annotation strong { color: rgba(250,250,250,0.7); font-weight: 600; }
 
-/* ── Models ── */
-.models {
+/* Model insight */
+.model-insight {
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 16px;
-}
-.model-row {
-  display: flex;
-  align-items: center;
   gap: 12px;
 }
-.model-bar-track {
-  flex: 1;
-  height: 8px;
-  background: var(--faint);
-  border-radius: 4px;
-  overflow: hidden;
-}
-.model-bar-fill {
-  height: 100%;
-  border-radius: 4px;
+.model-card {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
 }
 .model-name {
-  font-size: 13px;
-  font-weight: 500;
-  width: 140px;
+  font-size: 14px;
+  font-weight: 600;
   color: rgba(250,250,250,0.6);
 }
-.model-pct {
+.model-role {
   font-size: 13px;
-  font-weight: 600;
-  width: 36px;
-  text-align: right;
-  color: rgba(250,250,250,0.5);
+  color: rgba(250,250,250,0.3);
+}
+.model-msgs {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(250,250,250,0.2);
 }
 
-/* ── Days ── */
-.days {
-  display: flex;
-  gap: 8px;
-  margin-top: 16px;
-}
-.day {
-  flex: 1;
+/* Closing */
+.closing {
+  padding: 64px 0 0;
   text-align: center;
 }
-.day-label {
-  font-size: 10px;
-  color: rgba(250,250,250,0.15);
-  margin-bottom: 8px;
-}
-.day-circle {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.closing-text {
   font-size: 15px;
-  font-weight: 700;
-  margin: 0 auto;
-  max-width: 44px;
-}
-
-/* ── Pull quote ── */
-.quote {
-  padding: 48px 0 0;
-  text-align: center;
-}
-.quote-text {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.6;
-  color: rgba(250,250,250,0.5);
-  max-width: 400px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(250,250,250,0.35);
+  max-width: 360px;
   margin: 0 auto;
 }
-.quote-text strong {
+.closing-text strong {
+  color: rgba(250,250,250,0.6);
   font-weight: 600;
-  color: rgba(250,250,250,0.8);
 }
-.quote-text .warm { color: var(--warm); font-weight: 600; }
-.quote-text .cool { color: var(--cool); font-weight: 600; }
 
-/* ── Footer ── */
+/* Footer */
 .footer {
-  padding: 64px 0 48px;
+  padding: 48px 0 40px;
   text-align: center;
   font-size: 11px;
   color: rgba(250,250,250,0.08);
@@ -228,151 +195,126 @@ async function init() {
   const sorted = Object.entries(themes).sort((a,b) => b[1]-a[1]);
   const total = sorted.reduce((a,[,n]) => a+n, 0);
 
-  // Classify themes as warm (personal) or cool (technical)
   const warmThemes = ['Baby & Parenting', 'Health & Wellness', 'Daily Life'];
   const coolThemes = ['AI & Engineering', 'Crypto / Web3', 'Work/Career'];
-  let warmCount = 0, coolCount = 0;
-  for (const [t, n] of sorted) {
-    if (warmThemes.includes(t)) warmCount += n;
-    else if (coolThemes.includes(t)) coolCount += n;
-  }
-  const otherCount = total - warmCount - coolCount;
 
   // Hours
   const hours = c.hoursCT || {};
   const hMax = Math.max(...Object.values(hours).map(Number), 1);
 
-  // Days
-  const dayConvos = {};
-  for (const cv of (c.recentConvos || [])) {
-    if (!cv.created) continue;
-    const d = new Date(cv.created);
-    const day = d.toLocaleDateString('en-US', {weekday:'short'});
-    dayConvos[day] = (dayConvos[day] || 0) + 1;
-  }
-  const dayOrder = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
-  const dMax = Math.max(...Object.values(dayConvos), 1);
-
   // Models
   const models = Object.entries(c.models).sort((a,b) => b[1]-a[1]);
   const mTotal = models.reduce((a,[,n]) => a+n, 0);
 
-  // Build
-  let h = '';
-
-  // ── HERO: The tension ──
-  h += `
-  <div class="hero">
-    <div class="label">${fmt(weekAgo)} – ${fmt(now)}</div>
-    <div class="hero-split">
-      <div class="hero-side">
-        <div class="hero-num" style="color:var(--warm)">${warmCount}</div>
-        <div class="hero-cat" style="color:var(--warm);opacity:0.7">personal</div>
-      </div>
-      <div class="hero-vs">vs</div>
-      <div class="hero-side">
-        <div class="hero-num" style="color:var(--cool)">${coolCount}</div>
-        <div class="hero-cat" style="color:var(--cool);opacity:0.7">technical</div>
-      </div>
-    </div>
-    <div class="hero-sub">
-      ${total} conversations with AI this week.
-      ${warmCount > coolCount
-        ? `More about life than work.`
-        : warmCount === coolCount
-        ? `Perfectly balanced.`
-        : `More about work than life.`}
-      ${otherCount > 0 ? `<span style="color:rgba(250,250,250,0.2)">${otherCount} about neither.</span>` : ''}
-    </div>
-  </div>`;
-
-  // ── WHAT ABOUT: breakdown ──
-  h += `<div class="section"><div class="label">What you asked about</div>`;
-  h += `<div class="models" style="margin-top:14px">`;
-  for (const [theme, count] of sorted) {
-    const pct = Math.round(count / total * 100);
-    const isWarm = warmThemes.includes(theme);
-    const isCool = coolThemes.includes(theme);
-    const color = isWarm ? 'var(--warm)' : isCool ? 'var(--cool)' : 'rgba(250,250,250,0.25)';
-    h += `<div class="model-row">
-      <div class="model-name">${esc(theme)}</div>
-      <div class="model-bar-track"><div class="model-bar-fill" style="width:${pct}%;background:${color};opacity:0.6"></div></div>
-      <div class="model-pct">${count}</div>
-    </div>`;
-  }
-  h += `</div></div>`;
-
-  // ── QUOTE: The standout thread ──
+  // Find contrasting titles for hero
   const topPersonal = sorted.find(([t]) => warmThemes.includes(t));
   const topTechnical = sorted.find(([t]) => coolThemes.includes(t));
   const personalTitles = (c.themedTitles || {})[topPersonal?.[0]] || [];
   const technicalTitles = (c.themedTitles || {})[topTechnical?.[0]] || [];
-  if (personalTitles.length > 0 && technicalTitles.length > 0) {
-    h += `<div class="quote">
-      <div class="quote-text">
-        In the same week you researched
-        <span class="warm">"${esc(personalTitles[0])}"</span>
-        and
-        <span class="cool">"${esc(technicalTitles[0])}"</span>
-      </div>
+
+  // Model role descriptions
+  const modelRoles = {
+    'gpt-4o': 'quick answers',
+    'gpt-5-4-thinking': 'deep reasoning',
+    'o3': 'complex analysis',
+    'o4-mini': 'fast tasks',
+    'gpt-4': 'general use',
+    'gpt-4-turbo': 'general use',
+  };
+
+  let h = '';
+
+  // === HERO: The juxtaposition ===
+  const pTitle = personalTitles.length > 0 ? personalTitles[0] : null;
+  const tTitle = technicalTitles.length > 0 ? technicalTitles[0] : null;
+
+  h += `<div class="hero">`;
+  h += `<div class="label">${fmt(weekAgo)} \u2013 ${fmt(now)}</div>`;
+  if (pTitle && tTitle) {
+    h += `<div class="hero-quote">
+      In the same week you asked about
+      <span class="warm">\u201c${esc(pTitle)}\u201d</span>
+      and
+      <span class="cool">\u201c${esc(tTitle)}\u201d</span>
+    </div>`;
+  } else {
+    h += `<div class="hero-quote">${total} conversations with AI this week</div>`;
+  }
+  h += `<div class="stat-line">
+    <span>${total} conversations</span>\u00b7
+    <span>${models.length} models</span>\u00b7
+    <span>${mTotal} messages</span>
+  </div>`;
+  h += `</div>`;
+
+  // === MIDDLE: Theme breakdown ===
+  h += `<div class="section"><div class="label">What you asked about</div>`;
+  h += `<div class="theme-bars">`;
+  for (const [theme, count] of sorted) {
+    const pct = Math.round(count / total * 100);
+    const isWarm = warmThemes.includes(theme);
+    const isCool = coolThemes.includes(theme);
+    const color = isWarm ? 'var(--warm)' : isCool ? 'var(--cool)' : 'rgba(250,250,250,0.2)';
+    const opacity = isWarm || isCool ? '0.6' : '0.5';
+    h += `<div class="theme-row">
+      <div class="theme-name">${esc(theme)}</div>
+      <div class="theme-track"><div class="theme-fill" style="width:${pct}%;background:${color};opacity:${opacity}"></div></div>
+      <div class="theme-count">${count}</div>
     </div>`;
   }
+  h += `</div></div>`;
 
-  // ── WHEN: Hour chart ──
-  h += `<div class="section"><div class="label">When you think · Central Time</div>`;
-  h += `<div class="hours">`;
+  // === MIDDLE: Hour chart (clean) ===
+  h += `<div class="section"><div class="label">When you think</div>`;
+  h += `<div class="hour-chart"><div class="hours">`;
   for (let hr = 0; hr < 24; hr++) {
     const v = Number(hours[hr] || 0);
     const pct = v > 0 ? Math.max(8, (v / hMax) * 100) : 2;
-    const isLate = hr >= 22 || hr < 6;
-    const color = v === 0 ? 'var(--faint)'
-      : isLate ? 'var(--warm)'
-      : `var(--cool)`;
-    const opacity = v > 0 ? 0.3 + (v / hMax) * 0.5 : 1;
-    const cls = v > 0 ? ' has-val' : '';
-    h += `<div class="bar${cls}" style="height:${pct}%;background:${color};opacity:${opacity}" data-v="${v}"></div>`;
+    const color = v === 0 ? 'var(--faint)' : 'var(--cool)';
+    const opacity = v > 0 ? 0.25 + (v / hMax) * 0.55 : 1;
+    h += `<div class="bar" style="height:${pct}%;background:${color};opacity:${opacity}"></div>`;
   }
   h += `</div>`;
   h += `<div class="hour-axis">${['12a','','','3a','','','6a','','','9a','','','12p','','','3p','','','6p','','','9p','','',''].map(l => `<span>${l}</span>`).join('')}</div>`;
-  h += `<div class="hour-note">`;
-  h += `Peak at <strong>${fmtH(c.peakHour)}</strong>.`;
+  h += `<div class="hour-annotation">`;
+  h += `Peak at <strong>${fmtH(c.peakHour)} CT</strong>.`;
   if (c.nightConvos > 0) {
-    h += ` <span style="color:var(--warm)">${c.nightConvos} conversation${c.nightConvos>1?'s':''} after 10pm.</span>`;
+    h += ` ${c.nightConvos} after 10pm.`;
   }
-  h += `</div></div>`;
+  h += `</div></div></div>`;
 
-  // ── DAYS ──
-  h += `<div class="section"><div class="label">Conversations by day</div>`;
-  h += `<div class="days">`;
-  for (const day of dayOrder) {
-    const v = dayConvos[day] || 0;
-    const intensity = v > 0 ? 0.06 + (v / dMax) * 0.12 : 0;
-    const textColor = v > 0 ? `rgba(250,250,250,${0.3 + (v/dMax)*0.5})` : 'rgba(250,250,250,0.06)';
-    const bg = v > 0 ? `rgba(99,102,241,${intensity})` : 'var(--faint)';
-    h += `<div class="day">
-      <div class="day-label">${day}</div>
-      <div class="day-circle" style="background:${bg};color:${textColor}">${v || ''}</div>
-    </div>`;
+  // === MIDDLE: Models as insight ===
+  if (models.length > 1) {
+    h += `<div class="section"><div class="label">How you used AI</div>`;
+    h += `<div class="model-insight">`;
+    for (const [model, count] of models) {
+      const role = modelRoles[model] || 'general use';
+      h += `<div class="model-card">
+        <div class="model-name">${esc(model)}</div>
+        <div class="model-role">${role}</div>
+        <div class="model-msgs">${count}</div>
+      </div>`;
+    }
+    h += `</div></div>`;
   }
-  h += `</div></div>`;
 
-  // ── MODELS ──
-  h += `<div class="section"><div class="label">Models · ${mTotal} messages</div>`;
-  h += `<div class="models">`;
-  for (const [model, count] of models) {
-    const pct = Math.round(count / mTotal * 100);
-    h += `<div class="model-row">
-      <div class="model-name">${esc(model)}</div>
-      <div class="model-bar-track"><div class="model-bar-fill" style="width:${pct}%;background:var(--cool);opacity:0.5"></div></div>
-      <div class="model-pct">${pct}%</div>
-    </div>`;
+  // === CLOSING: Synthesis ===
+  let warmCount = 0, coolCount = 0;
+  for (const [t, n] of sorted) {
+    if (warmThemes.includes(t)) warmCount += n;
+    else if (coolThemes.includes(t)) coolCount += n;
   }
-  h += `</div></div>`;
-
-  // ── FOOTER ──
-  h += `<div class="footer">
-    Data from Vana · ${fmt(now)}, ${now.getFullYear()}
+  const ratio = warmCount > coolCount ? 'more about life than work'
+    : warmCount === coolCount ? 'equally about life and work'
+    : 'more about work than life';
+  h += `<div class="closing">
+    <div class="closing-text">
+      <strong>${total} conversations</strong> this week \u2014 ${ratio}. The same person, switching between both all day.
+    </div>
   </div>`;
+
+  // === FOOTER ===
+  h += `<div class="footer">Data from Vana \u00b7 ${fmt(now)}, ${now.getFullYear()}</div>`;
 
   document.getElementById('page').innerHTML = h;
 }
