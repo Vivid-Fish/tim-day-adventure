@@ -311,12 +311,12 @@ async function init() {
   }
   h += `</div>`;
 
-  // Deep detail — a specific late-night moment
-  const lateNight = c.lateNightDetails?.[0];
-  if (lateNight) {
+  // Deep detail — an actual question pulled from the data
+  const detail = c.lateNightDetails?.[0] || c.deepestConvo;
+  if (detail && detail.firstQuestion) {
     h += `<div class="deep">
-      "${esc(lateNight.firstQuestion)}"
-      <span class="time">${fmtH(lateNight.hour)} · ${esc(lateNight.title)}</span>
+      "${esc(detail.firstQuestion)}"
+      <span class="time">${detail.hour !== null && detail.hour !== undefined ? fmtH(detail.hour) + ' · ' : ''}${esc(detail.title)}${detail.messageCount > 1 ? ' · ' + detail.messageCount + ' messages' : ''}</span>
     </div>`;
   }
   h += `</div></div>`;
