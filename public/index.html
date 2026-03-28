@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tim's Data</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #08080f; --card: rgba(255,255,255,0.03); --border: rgba(255,255,255,0.06); --muted: rgba(255,255,255,0.35); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: #e0e0e8; min-height: 100vh; padding: 28px 16px 80px; }
+.c { max-width: 640px; margin: 0 auto; }
+h1 { font-size: 26px; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(135deg, #4af 20%, #a78bfa 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 4px; }
+.sub { color: var(--muted); font-size: 12px; margin-bottom: 24px; }
+.loading { color: var(--muted); font-size: 14px; padding: 40px 0; text-align: center; }
+
+/* Insight cards — the star of the show */
+.insight { margin-bottom: 16px; padding: 18px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; position: relative; overflow: hidden; }
+.insight::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+.insight.theme::before { background: linear-gradient(90deg, #4af, #a78bfa); }
+.insight.schedule::before { background: linear-gradient(90deg, #fbbf24, #f97316); }
+.insight.identity::before { background: linear-gradient(90deg, #4ade80, #06b6d4); }
+.insight.music::before { background: linear-gradient(90deg, #fb7185, #f472b6); }
+.insight.ai-ecosystem::before { background: linear-gradient(90deg, #a78bfa, #818cf8); }
+.insight.memory::before { background: linear-gradient(90deg, #06b6d4, #4af); }
+.insight.crossref::before { background: linear-gradient(90deg, #fbbf24, #fb7185); }
+.insight-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; line-height: 1.2; }
+.insight-body { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.65); }
+.insight-examples { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 5px; }
+.insight-example { font-size: 11px; padding: 3px 10px; border-radius: 8px; background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.5); }
+.insight-artists { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+.artist { font-size: 12px; padding: 4px 12px; border-radius: 8px; background: rgba(251,113,133,0.1); border: 1px solid rgba(251,113,133,0.15); color: #fda4af; }
+.artist .n { opacity: 0.5; margin-left: 4px; }
+
+/* Stats strip */
+.strip { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.chip { flex: 1; min-width: 80px; padding: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; text-align: center; }
+.chip-val { font-size: 26px; font-weight: 900; line-height: 1; }
+.chip-lbl { font-size: 10px; color: var(--muted); margin-top: 3px; letter-spacing: 0.5px; }
+
+/* Section */
+.sec { margin-bottom: 28px; }
+.sec-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 10px; }
+
+/* Hour heatmap */
+.hours { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; margin-bottom: 4px; }
+.hr { aspect-ratio: 1; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 9px; color: rgba(255,255,255,0.2); }
+.hours-label { font-size: 10px; color: rgba(255,255,255,0.2); display: flex; justify-content: space-between; margin-bottom: 16px; }
+
+/* Bar chart */
+.bars { display: flex; flex-direction: column; gap: 4px; }
+.bar-r { display: flex; align-items: center; gap: 8px; }
+.bar-l { font-size: 12px; color: rgba(255,255,255,0.4); width: 75px; text-align: right; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bar-t { flex: 1; height: 16px; background: rgba(255,255,255,0.025); border-radius: 3px; overflow: hidden; }
+.bar-f { height: 100%; border-radius: 3px; min-width: 2px; }
+.bar-v { font-size: 10px; color: rgba(255,255,255,0.3); width: 24px; flex-shrink: 0; }
+
+/* Topic pills */
+.pills { display: flex; flex-wrap: wrap; gap: 5px; }
+.pill { padding: 3px 10px; border-radius: 8px; font-size: 11px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.5); }
+
+/* Timeline */
+.tl { display: flex; flex-direction: column; gap: 5px; }
+.tl-i { padding: 9px 12px; border-radius: 7px; background: var(--card); border: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.tl-t { font-size: 13px; font-weight: 500; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tl-m { font-size: 11px; color: var(--muted); white-space: nowrap; }
+
+/* Platform cards */
+.plat { display: flex; gap: 12px; align-items: center; padding: 12px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 7px; }
+.plat-i { font-size: 20px; width: 28px; text-align: center; }
+.plat-info { flex: 1; }
+.plat-n { font-size: 14px; font-weight: 600; }
+.plat-d { font-size: 11px; color: var(--muted); }
+.plat-s { font-size: 18px; font-weight: 700; }
+
+/* Tabs */
+.tabs { display: flex; gap: 6px; margin-bottom: 24px; }
+.tab { padding: 7px 18px; border-radius: 18px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); color: rgba(255,255,255,0.4); transition: all 0.15s; user-select: none; }
+.tab:hover { background: rgba(255,255,255,0.05); }
+.tab.on { background: rgba(68,170,255,0.1); border-color: rgba(68,170,255,0.2); color: #4af; }
+
+.blue { color: #4af; } .purple { color: #a78bfa; } .green { color: #4ade80; } .amber { color: #fbbf24; } .rose { color: #fb7185; }
+.divider { height: 1px; background: var(--border); margin: 24px 0; }
+</style>
+</head>
+<body>
+<div class="c">
+  <h1>Tim Nunamaker</h1>
+  <p class="sub" id="sub">Loading data...</p>
+  <div class="tabs" id="tabs"></div>
+  <div id="out"><div class="loading">Connecting to Vana data...</div></div>
+</div>
+<script>
+let D = null, tab = 'insights';
+const tabs = { insights: 'Insights', week: 'This Week', all: 'All Data' };
+
+async function init() {
+  try {
+    const res = await fetch('/api/data');
+    D = await res.json();
+    document.getElementById('sub').textContent = `Personal data from ${Object.keys(tabs).length} views · ${new Date(D.generated).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`;
+    document.getElementById('tabs').innerHTML = Object.entries(tabs).map(([k, v]) =>
+      `<div class="tab${k === tab ? ' on' : ''}" onclick="go('${k}')">${v}</div>`
+    ).join('');
+    render();
+  } catch (e) {
+    document.getElementById('out').innerHTML = `<div class="loading">Error loading data: ${e.message}</div>`;
+  }
+}
+
+function go(t) { tab = t; document.querySelectorAll('.tab').forEach(el => el.classList.toggle('on', el.textContent === tabs[t])); render(); }
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+
+function render() {
+  document.getElementById('out').innerHTML = tab === 'insights' ? renderInsights() : tab === 'week' ? renderWeek() : renderAll();
+}
+
+function renderInsights() {
+  if (!D.insights || !D.insights.length) return '<div class="loading">Not enough data for insights yet.</div>';
+  return D.insights.map(i => `
+    <div class="insight ${i.type}">
+      <div class="insight-title">${esc(i.title)}</div>
+      <div class="insight-body">${esc(i.body)}</div>
+      ${i.examples ? `<div class="insight-examples">${i.examples.map(e => `<div class="insight-example">${esc(e)}</div>`).join('')}</div>` : ''}
+      ${i.artists ? `<div class="insight-artists">${i.artists.map(a => `<div class="artist">${esc(a.name)}<span class="n">${a.count}</span></div>`).join('')}</div>` : ''}
+    </div>
+  `).join('') + `
+    <div class="divider"></div>
+    <div class="sec">
+      <div class="sec-title">This week's themes</div>
+      <div class="bars">${Object.entries(D.chatgpt.themeCounts).sort((a,b) => b[1]-a[1]).map(([t, n]) => {
+        const max = Math.max(...Object.values(D.chatgpt.themeCounts));
+        const hues = {'Baby & Parenting':'#fb7185','AI & Engineering':'#818cf8','Geopolitics':'#fbbf24','Daily Life':'#4ade80','Health & Wellness':'#06b6d4','Crypto / Web3':'#a78bfa','Work/Career':'#f97316','Other':'#666'};
+        return `<div class="bar-r"><div class="bar-l">${esc(t)}</div><div class="bar-t"><div class="bar-f" style="width:${n/max*100}%;background:${hues[t]||'#4af'}"></div></div><div class="bar-v">${n}</div></div>`;
+      }).join('')}</div>
+    </div>`;
+}
+
+function renderWeek() {
+  const c = D.chatgpt, g = D.github;
+  const hMax = Math.max(...Object.values(c.hoursCT).map(Number), 1);
+  return `
+    <div class="strip">
+      <div class="chip"><div class="chip-val blue">${c.last7d}</div><div class="chip-lbl">CONVERSATIONS</div></div>
+      <div class="chip"><div class="chip-val purple">${c.totalMessages}</div><div class="chip-lbl">MESSAGES</div></div>
+      <div class="chip"><div class="chip-val green">${g.active7d.length}</div><div class="chip-lbl">REPOS ACTIVE</div></div>
+    </div>
+    <div class="sec">
+      <div class="sec-title">Active hours (Central Time)</div>
+      <div class="hours">${Array.from({length:24},(_,h)=>{
+        const v = Number(c.hoursCT[h]||0);
+        const bg = v > 0 ? `rgba(68,170,255,${(.06+v/hMax*.5).toFixed(2)})` : 'rgba(255,255,255,0.015)';
+        return `<div class="hr" style="background:${bg}" title="${fmtH(h)} — ${v}">${h%3===0?fmtH(h):''}</div>`;
+      }).join('')}</div>
+      <div class="hours-label"><span>12am</span><span>6am</span><span>noon</span><span>6pm</span></div>
+    </div>
+    <div class="sec">
+      <div class="sec-title">Models used</div>
+      <div class="pills" style="margin-bottom:16px">${Object.entries(c.models).map(([m,n])=>{
+        const color = m.includes('4o')?'#34d399':m.includes('5')?'#c084fc':'#fcd34d';
+        return `<div class="pill" style="border-color:${color}33;color:${color}">${m} <span style="opacity:0.5">${n}</span></div>`;
+      }).join('')}</div>
+    </div>
+    <div class="sec">
+      <div class="sec-title">Topics this week</div>
+      <div class="pills" style="margin-bottom:16px">${c.topics7d.map(t => `<div class="pill">${esc(t)}</div>`).join('')}</div>
+    </div>
+    <div class="sec">
+      <div class="sec-title">Recent conversations</div>
+      <div class="tl">${(c.recentConvos||[]).slice(0,12).map(cv => {
+        const d = cv.created ? new Date(cv.created) : null;
+        const ts = d ? d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'}) : '';
+        return `<div class="tl-i"><div class="tl-t">${esc(cv.title)}</div><div class="tl-m">${cv.messageCount>0?cv.messageCount+'m ':''}${ts}</div></div>`;
+      }).join('')}</div>
+    </div>
+    ${g.active7d.length ? `
+      <div class="divider"></div>
+      <div class="sec">
+        <div class="sec-title">GitHub repos updated</div>
+        <div class="tl">${g.active7d.map(r => `<div class="tl-i"><div class="tl-t">${esc(r.name)}</div><div class="tl-m">${r.language||''}</div></div>`).join('')}</div>
+      </div>
+    ` : ''}`;
+}
+
+function renderAll() {
+  const c = D.chatgpt, g = D.github, y = D.youtube, l = D.linkedin, u = D.uber;
+  const lMax = Math.max(...Object.values(g.languages), 1);
+  const pMax = Math.max(...y.playlists.map(p=>p.count), 1);
+  return `
+    <div class="sec">
+      <div class="sec-title">Connected platforms</div>
+      ${pl('💬','ChatGPT',`${c.total.toLocaleString()} conversations · ${c.memories} memories`,c.total.toLocaleString(),'blue')}
+      ${pl('🐙','GitHub',`@${g.profile.username} · ${g.profile.followers} followers`,g.totalRepos,'green')}
+      ${pl('▶️','YouTube',`${y.subscriptions} subs · ${y.likedVideos} liked · ${y.totalTracks} playlist tracks`,y.totalTracks,'rose')}
+      ${pl('💼','LinkedIn',esc(l.profile.headline),l.totalConnections,'purple')}
+      ${pl('🚗','Uber',`$${u.totalSpent} lifetime`,u.totalTrips,'amber')}
+    </div>
+    <div class="divider"></div>
+    <div class="sec">
+      <div class="sec-title">GitHub languages</div>
+      <div class="bars">${Object.entries(g.languages).sort((a,b)=>b[1]-a[1]).map(([lang,n])=>{
+        const colors = {Python:'#3572A5',JavaScript:'#f1e05a',TypeScript:'#3178c6',Go:'#00ADD8',Ruby:'#701516',Shell:'#89e051'};
+        return `<div class="bar-r"><div class="bar-l">${lang}</div><div class="bar-t"><div class="bar-f" style="width:${n/lMax*100}%;background:${colors[lang]||'#4af'}"></div></div><div class="bar-v">${n}</div></div>`;
+      }).join('')}</div>
+    </div>
+    <div class="divider"></div>
+    <div class="sec">
+      <div class="sec-title">YouTube top artists</div>
+      <div class="pills">${Object.entries(y.topArtists).map(([a,n])=>`<div class="pill">${esc(a)} <span style="opacity:0.4">${n}</span></div>`).join('')}</div>
+    </div>
+    <div class="divider"></div>
+    <div class="sec">
+      <div class="sec-title">YouTube playlists</div>
+      <div class="bars">${y.playlists.sort((a,b)=>b.count-a.count).map(p=>`<div class="bar-r"><div class="bar-l" title="${esc(p.title)}">${esc(p.title)}</div><div class="bar-t"><div class="bar-f" style="width:${p.count/pMax*100}%;background:#fb7185"></div></div><div class="bar-v">${p.count}</div></div>`).join('')}</div>
+    </div>
+    <div class="divider"></div>
+    <div class="sec">
+      <div class="sec-title">LinkedIn skills</div>
+      <div class="pills">${l.skills.map(s=>`<div class="pill">${esc(s)}</div>`).join('')}</div>
+    </div>`;
+}
+
+function pl(icon,name,detail,stat,color) {
+  return `<div class="plat"><div class="plat-i">${icon}</div><div class="plat-info"><div class="plat-n">${name}</div><div class="plat-d">${detail}</div></div><div class="plat-s ${color}">${stat}</div></div>`;
+}
+
+function fmtH(h) { return h===0?'12a':h<12?h+'a':h===12?'12p':(h-12)+'p'; }
+
+init();
+</script>
+</body>
+</html>
