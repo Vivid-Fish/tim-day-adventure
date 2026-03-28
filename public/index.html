@@ -6,265 +6,375 @@
 <title>Tim's Week</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
-:root { --bg: #06060c; }
+/*
+  Design system:
+  - Warm (rose #f43f5e): personal, family, parenting
+  - Cool (blue #6366f1): technical, engineering, AI
+  - Neutral: everything else — no color, just opacity
+  - One hero moment. Supporting evidence below. Whitespace is structure.
+*/
+:root {
+  --bg: #09090b;
+  --warm: #f43f5e;
+  --cool: #6366f1;
+  --text: #fafafa;
+  --muted: rgba(250,250,250,0.4);
+  --faint: rgba(250,250,250,0.08);
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: #e8e8f0; min-height: 100vh; overflow-x: hidden; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 480px; margin: 0 auto; padding: 0 24px; }
 
-.hero { padding: 48px 20px 12px; text-align: center; position: relative; }
-.hero::before { content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 500px; height: 350px; background: radial-gradient(ellipse, rgba(68,170,255,0.07) 0%, transparent 70%); pointer-events: none; }
-.hero-week { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.25); position: relative; }
-.hero-number { font-size: 80px; font-weight: 900; line-height: 1; background: linear-gradient(135deg, #4af 10%, #a78bfa 50%, #fb7185 90%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; }
-.hero-label { font-size: 18px; color: rgba(255,255,255,0.4); margin-top: 2px; position: relative; }
+/* ── Label: the only recurring typographic element ── */
+.label {
+  font-size: 11px; font-weight: 500; letter-spacing: 1.5px;
+  text-transform: uppercase; color: rgba(250,250,250,0.22);
+}
 
-.wrap { max-width: 600px; margin: 0 auto; padding: 0 16px; }
+/* ── Hero: the emotional center ── */
+.hero {
+  padding: 56px 0 0;
+  text-align: center;
+}
+.hero .label { margin-bottom: 20px; }
+.hero-split {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 12px;
+}
+.hero-side { text-align: center; }
+.hero-num {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.hero-cat {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+.hero-vs {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(250,250,250,0.15);
+  padding-bottom: 16px;
+}
+.hero-sub {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto;
+}
 
-/* Theme donut */
-.donut-wrap { display: flex; align-items: center; justify-content: center; gap: 24px; margin: 28px 0; }
-.donut-legend { display: flex; flex-direction: column; gap: 6px; }
-.donut-item { display: flex; align-items: center; gap: 8px; font-size: 13px; }
-.donut-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-.donut-count { color: rgba(255,255,255,0.3); margin-left: 4px; }
+/* ── Section spacing ── */
+.section {
+  padding: 48px 0 0;
+}
 
-/* Cards */
-.card { margin-bottom: 16px; border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.05); }
-.card-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.2); padding: 18px 20px 0; }
+/* ── Hour chart ── */
+.hours {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 80px;
+  margin: 16px 0 6px;
+}
+.hours .bar {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  min-width: 0;
+}
+.hours .bar.has-val::after {
+  content: attr(data-v);
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(250,250,250,0.3);
+}
+.hour-axis {
+  display: flex;
+  font-size: 9px;
+  color: rgba(250,250,250,0.12);
+  margin-bottom: 12px;
+}
+.hour-axis span { flex: 1; text-align: center; }
+.hour-note {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.hour-note strong { color: rgba(250,250,250,0.7); font-weight: 600; }
 
-/* Hour chart */
-.hours-bar { display: flex; height: 56px; gap: 1px; align-items: flex-end; padding: 0 20px; }
-.hours-bar .col { flex: 1; border-radius: 2px 2px 0 0; min-width: 0; cursor: default; }
-.hours-labels { display: flex; padding: 4px 20px 14px; font-size: 9px; color: rgba(255,255,255,0.12); }
-.hours-labels span { flex: 1; text-align: center; }
-.hours-insight { text-align: center; padding: 0 20px 16px; font-size: 13px; color: rgba(255,255,255,0.35); }
+/* ── Models ── */
+.models {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+.model-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.model-bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--faint);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.model-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+.model-name {
+  font-size: 13px;
+  font-weight: 500;
+  width: 140px;
+  color: rgba(250,250,250,0.6);
+}
+.model-pct {
+  font-size: 13px;
+  font-weight: 600;
+  width: 36px;
+  text-align: right;
+  color: rgba(250,250,250,0.5);
+}
 
-/* Day dots */
-.day-row { display: flex; gap: 6px; justify-content: center; padding: 16px 20px; }
-.day-col { text-align: center; flex: 1; }
-.day-label { font-size: 10px; color: rgba(255,255,255,0.2); margin-bottom: 6px; }
-.day-val { font-size: 22px; font-weight: 800; }
-.day-bar { height: 4px; border-radius: 2px; margin-top: 6px; }
+/* ── Days ── */
+.days {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+.day {
+  flex: 1;
+  text-align: center;
+}
+.day-label {
+  font-size: 10px;
+  color: rgba(250,250,250,0.15);
+  margin-bottom: 8px;
+}
+.day-circle {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 auto;
+  max-width: 44px;
+}
 
-/* Contrast */
-.contrast { display: flex; }
-.contrast-side { flex: 1; padding: 18px 16px; }
-.contrast-side:first-child { border-right: 1px solid rgba(255,255,255,0.04); }
-.contrast-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
-.contrast-items { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.5); }
-.contrast-items strong { color: rgba(255,255,255,0.75); font-weight: 600; }
+/* ── Pull quote ── */
+.quote {
+  padding: 48px 0 0;
+  text-align: center;
+}
+.quote-text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(250,250,250,0.5);
+  max-width: 400px;
+  margin: 0 auto;
+}
+.quote-text strong {
+  font-weight: 600;
+  color: rgba(250,250,250,0.8);
+}
+.quote-text .warm { color: var(--warm); font-weight: 600; }
+.quote-text .cool { color: var(--cool); font-weight: 600; }
 
-/* Topic flow */
-.topics-flow { padding: 12px 20px 18px; display: flex; flex-wrap: wrap; gap: 5px; }
-.topic-pill { padding: 4px 11px; border-radius: 8px; font-size: 12px; line-height: 1.3; border: 1px solid rgba(255,255,255,0.05); }
-
-/* Timeline */
-.tl { padding: 4px 20px 16px; }
-.tl-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
-.tl-item:last-child { border: none; }
-.tl-title { font-size: 13px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 12px; }
-.tl-meta { font-size: 11px; color: rgba(255,255,255,0.2); white-space: nowrap; }
-
-/* GitHub */
-.repo-row { display: flex; align-items: center; gap: 10px; padding: 10px 20px; }
-.repo-row:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.03); }
-.repo-name { font-size: 14px; font-weight: 600; color: #4ade80; }
-.repo-desc { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 2px; }
-.repo-lang { font-size: 11px; color: rgba(255,255,255,0.25); margin-left: auto; white-space: nowrap; }
-
-/* Callout */
-.callout { text-align: center; padding: 24px 20px; }
-.callout-big { font-size: 44px; font-weight: 900; line-height: 1; }
-.callout-text { font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 6px; line-height: 1.5; }
-
-/* Models */
-.model-row { display: flex; gap: 8px; padding: 12px 20px 16px; flex-wrap: wrap; }
-.model-chip { padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; }
-
-.footer { text-align: center; padding: 32px 20px 48px; font-size: 11px; color: rgba(255,255,255,0.1); }
+/* ── Footer ── */
+.footer {
+  padding: 64px 0 48px;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(250,250,250,0.08);
+}
 </style>
 </head>
 <body>
-
-<div class="hero">
-  <div class="hero-week" id="hero-week">loading...</div>
-  <div class="hero-number" id="hero-num">—</div>
-  <div class="hero-label" id="hero-label"></div>
-</div>
-
-<div class="wrap" id="out"></div>
-<div class="footer" id="footer"></div>
-
+<div class="page" id="page"><div style="padding:80px 0;text-align:center;color:rgba(250,250,250,0.15)">Loading...</div></div>
 <script>
 async function init() {
   const D = await (await fetch('/api/data')).json();
-  const c = D.chatgpt, g = D.github;
+  const c = D.chatgpt;
 
-  // Date range
   const now = new Date(D.generated);
   const weekAgo = new Date(now - 7*24*60*60*1000);
   const fmt = d => d.toLocaleDateString('en-US', {month:'short',day:'numeric'});
-  document.getElementById('hero-week').textContent = `${fmt(weekAgo)} — ${fmt(now)}`;
-  document.getElementById('hero-num').textContent = c.last7d;
-  document.getElementById('hero-label').textContent = 'conversations with AI';
 
   const themes = c.themeCounts || {};
-  const themeColors = {'Baby & Parenting':'#fb7185','AI & Engineering':'#818cf8','Geopolitics':'#fbbf24','Daily Life':'#4ade80','Health & Wellness':'#06b6d4','Crypto / Web3':'#a78bfa','Work/Career':'#f97316','Other':'#555'};
-  const sortedThemes = Object.entries(themes).sort((a,b) => b[1]-a[1]);
-  const themeTotal = sortedThemes.reduce((a,[,n]) => a+n, 0);
+  const sorted = Object.entries(themes).sort((a,b) => b[1]-a[1]);
+  const total = sorted.reduce((a,[,n]) => a+n, 0);
 
-  let html = '';
+  // Classify themes as warm (personal) or cool (technical)
+  const warmThemes = ['Baby & Parenting', 'Health & Wellness', 'Daily Life'];
+  const coolThemes = ['AI & Engineering', 'Crypto / Web3', 'Work/Career'];
+  let warmCount = 0, coolCount = 0;
+  for (const [t, n] of sorted) {
+    if (warmThemes.includes(t)) warmCount += n;
+    else if (coolThemes.includes(t)) coolCount += n;
+  }
+  const otherCount = total - warmCount - coolCount;
 
-  // ── DONUT: What you thought about ──
-  html += `<div class="donut-wrap">
-    <canvas id="donut" width="160" height="160"></canvas>
-    <div class="donut-legend">
-      ${sortedThemes.map(([t,n]) => `<div class="donut-item"><div class="donut-dot" style="background:${themeColors[t]||'#555'}"></div>${t}<span class="donut-count">${n}</span></div>`).join('')}
-    </div>
-  </div>`;
-
-  // ── HOURS: When you think ──
+  // Hours
   const hours = c.hoursCT || {};
   const hMax = Math.max(...Object.values(hours).map(Number), 1);
-  html += `<div class="card">
-    <div class="card-title">When you think · Central Time</div>
-    <div style="padding-top:14px">
-      <div class="hours-bar">
-        ${Array.from({length:24},(_,h)=>{
-          const v = Number(hours[h]||0);
-          const pct = v > 0 ? Math.max(10, (v/hMax)*100) : 3;
-          const isNight = h < 6 || h >= 22;
-          const isMorning = h >= 6 && h < 12;
-          const hue = isNight ? 270 : isMorning ? 200 : h < 17 ? 45 : 30;
-          const bg = v > 0 ? `hsla(${hue}, 70%, 55%, ${0.25 + (v/hMax)*0.55})` : 'rgba(255,255,255,0.02)';
-          return `<div class="col" style="height:${pct}%;background:${bg}" title="${fmtH(h)}: ${v}"></div>`;
-        }).join('')}
-      </div>
-      <div class="hours-labels">${['12a','','','3a','','','6a','','','9a','','','12p','','','3p','','','6p','','','9p','','',''].map(l=>`<span>${l}</span>`).join('')}</div>
-    </div>
-    <div class="hours-insight">
-      Peak at <strong style="color:#4af">${fmtH(c.peakHour)}</strong> ·
-      ${c.nightConvos} after midnight${c.nightConvos > 3 ? ' — the baby isn\'t the only one up' : ''}
-    </div>
-  </div>`;
 
-  // ── DAYS: Activity by day ──
+  // Days
   const dayConvos = {};
   for (const cv of (c.recentConvos || [])) {
     if (!cv.created) continue;
     const d = new Date(cv.created);
-    const day = d.toLocaleDateString('en-US', {weekday: 'short'});
+    const day = d.toLocaleDateString('en-US', {weekday:'short'});
     dayConvos[day] = (dayConvos[day] || 0) + 1;
   }
   const dayOrder = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
   const dMax = Math.max(...Object.values(dayConvos), 1);
-  html += `<div class="card">
-    <div class="card-title">Conversations by day</div>
-    <div class="day-row">
-      ${dayOrder.map(d => {
-        const v = dayConvos[d] || 0;
-        const pct = v > 0 ? Math.max(15, (v/dMax)*100) : 5;
-        return `<div class="day-col">
-          <div class="day-label">${d}</div>
-          <div class="day-val" style="color:${v>0?'rgba(68,170,255,'+(0.4+v/dMax*0.6)+')':'rgba(255,255,255,0.08)'}">${v||'·'}</div>
-          <div class="day-bar" style="background:${v>0?'rgba(68,170,255,'+(0.15+v/dMax*0.4)+')':'rgba(255,255,255,0.02)'};width:${pct}%;margin-left:auto;margin-right:auto"></div>
-        </div>`;
-      }).join('')}
+
+  // Models
+  const models = Object.entries(c.models).sort((a,b) => b[1]-a[1]);
+  const mTotal = models.reduce((a,[,n]) => a+n, 0);
+
+  // Build
+  let h = '';
+
+  // ── HERO: The tension ──
+  h += `
+  <div class="hero">
+    <div class="label">${fmt(weekAgo)} – ${fmt(now)}</div>
+    <div class="hero-split">
+      <div class="hero-side">
+        <div class="hero-num" style="color:var(--warm)">${warmCount}</div>
+        <div class="hero-cat" style="color:var(--warm);opacity:0.7">personal</div>
+      </div>
+      <div class="hero-vs">vs</div>
+      <div class="hero-side">
+        <div class="hero-num" style="color:var(--cool)">${coolCount}</div>
+        <div class="hero-cat" style="color:var(--cool);opacity:0.7">technical</div>
+      </div>
+    </div>
+    <div class="hero-sub">
+      ${total} conversations with AI this week.
+      ${warmCount > coolCount
+        ? `More about life than work.`
+        : warmCount === coolCount
+        ? `Perfectly balanced.`
+        : `More about work than life.`}
+      ${otherCount > 0 ? `<span style="color:rgba(250,250,250,0.2)">${otherCount} about neither.</span>` : ''}
     </div>
   </div>`;
 
-  // ── MODELS: What you used ──
-  html += `<div class="card">
-    <div class="card-title">Models this week · ${c.totalMessages} messages</div>
-    <div class="model-row">
-      ${Object.entries(c.models).map(([m,n]) => {
-        const total = Object.values(c.models).reduce((a,b)=>a+b,0);
-        const pct = Math.round(n/total*100);
-        const color = m.includes('4o') ? '#34d399' : m.includes('5') ? '#c084fc' : '#fcd34d';
-        const bg = m.includes('4o') ? 'rgba(52,211,153,0.1)' : m.includes('5') ? 'rgba(192,132,252,0.1)' : 'rgba(252,211,77,0.1)';
-        return `<div class="model-chip" style="background:${bg};color:${color};border:1px solid ${color}22">${m} <span style="opacity:0.5">${pct}%</span></div>`;
-      }).join('')}
-    </div>
-  </div>`;
-
-  // ── HIGHLIGHTS: Curated interesting conversations ──
-  const themed = c.themedTitles || {};
-  const topTheme = sortedThemes[0];
-  // Pick 1-2 standout titles per theme (skip generic ones)
-  const highlights = [];
-  for (const [theme, titles] of Object.entries(themed)) {
-    const interesting = titles.filter(t => t.length > 10 && !/^User query/.test(t));
-    if (interesting.length > 0) {
-      highlights.push({ theme, title: interesting[0], color: themeColors[theme] || '#555' });
-    }
+  // ── WHAT ABOUT: breakdown ──
+  h += `<div class="section"><div class="label">What you asked about</div>`;
+  h += `<div class="models" style="margin-top:14px">`;
+  for (const [theme, count] of sorted) {
+    const pct = Math.round(count / total * 100);
+    const isWarm = warmThemes.includes(theme);
+    const isCool = coolThemes.includes(theme);
+    const color = isWarm ? 'var(--warm)' : isCool ? 'var(--cool)' : 'rgba(250,250,250,0.25)';
+    h += `<div class="model-row">
+      <div class="model-name">${esc(theme)}</div>
+      <div class="model-bar-track"><div class="model-bar-fill" style="width:${pct}%;background:${color};opacity:0.6"></div></div>
+      <div class="model-pct">${count}</div>
+    </div>`;
   }
-  if (highlights.length > 0) {
-    html += `<div class="card">
-      <div class="card-title">Standout conversations</div>
-      <div class="tl" style="padding: 4px 0">
-        ${highlights.slice(0, 5).map(h => `<div class="tl-item" style="padding:10px 20px">
-          <div class="tl-title">${esc(h.title)}</div>
-          <div class="tl-meta" style="color:${h.color}">${h.theme.split(' ')[0]}</div>
-        </div>`).join('')}
+  h += `</div></div>`;
+
+  // ── QUOTE: The standout thread ──
+  const topPersonal = sorted.find(([t]) => warmThemes.includes(t));
+  const topTechnical = sorted.find(([t]) => coolThemes.includes(t));
+  const personalTitles = (c.themedTitles || {})[topPersonal?.[0]] || [];
+  const technicalTitles = (c.themedTitles || {})[topTechnical?.[0]] || [];
+  if (personalTitles.length > 0 && technicalTitles.length > 0) {
+    h += `<div class="quote">
+      <div class="quote-text">
+        In the same week you researched
+        <span class="warm">"${esc(personalTitles[0])}"</span>
+        and
+        <span class="cool">"${esc(technicalTitles[0])}"</span>
       </div>
     </div>`;
   }
 
-  // ── CALLOUT: The week in one number ──
-  const topPct = topTheme ? Math.round(topTheme[1] / themeTotal * 100) : 0;
-  html += `<div class="card callout">
-    <div class="callout-big" style="color:${themeColors[topTheme?.[0]] || '#4af'}">${topPct}%</div>
-    <div class="callout-text">${topTheme ? `of your AI conversations this week were about <strong style="color:${themeColors[topTheme[0]]}">${topTheme[0].toLowerCase()}</strong>` : 'of your week'}</div>
+  // ── WHEN: Hour chart ──
+  h += `<div class="section"><div class="label">When you think · Central Time</div>`;
+  h += `<div class="hours">`;
+  for (let hr = 0; hr < 24; hr++) {
+    const v = Number(hours[hr] || 0);
+    const pct = v > 0 ? Math.max(8, (v / hMax) * 100) : 2;
+    const isLate = hr >= 22 || hr < 6;
+    const color = v === 0 ? 'var(--faint)'
+      : isLate ? 'var(--warm)'
+      : `var(--cool)`;
+    const opacity = v > 0 ? 0.3 + (v / hMax) * 0.5 : 1;
+    const cls = v > 0 ? ' has-val' : '';
+    h += `<div class="bar${cls}" style="height:${pct}%;background:${color};opacity:${opacity}" data-v="${v}"></div>`;
+  }
+  h += `</div>`;
+  h += `<div class="hour-axis">${['12a','','','3a','','','6a','','','9a','','','12p','','','3p','','','6p','','','9p','','',''].map(l => `<span>${l}</span>`).join('')}</div>`;
+  h += `<div class="hour-note">`;
+  h += `Peak at <strong>${fmtH(c.peakHour)}</strong>.`;
+  if (c.nightConvos > 0) {
+    h += ` <span style="color:var(--warm)">${c.nightConvos} conversation${c.nightConvos>1?'s':''} after 10pm.</span>`;
+  }
+  h += `</div></div>`;
+
+  // ── DAYS ──
+  h += `<div class="section"><div class="label">Conversations by day</div>`;
+  h += `<div class="days">`;
+  for (const day of dayOrder) {
+    const v = dayConvos[day] || 0;
+    const intensity = v > 0 ? 0.06 + (v / dMax) * 0.12 : 0;
+    const textColor = v > 0 ? `rgba(250,250,250,${0.3 + (v/dMax)*0.5})` : 'rgba(250,250,250,0.06)';
+    const bg = v > 0 ? `rgba(99,102,241,${intensity})` : 'var(--faint)';
+    h += `<div class="day">
+      <div class="day-label">${day}</div>
+      <div class="day-circle" style="background:${bg};color:${textColor}">${v || ''}</div>
+    </div>`;
+  }
+  h += `</div></div>`;
+
+  // ── MODELS ──
+  h += `<div class="section"><div class="label">Models · ${mTotal} messages</div>`;
+  h += `<div class="models">`;
+  for (const [model, count] of models) {
+    const pct = Math.round(count / mTotal * 100);
+    h += `<div class="model-row">
+      <div class="model-name">${esc(model)}</div>
+      <div class="model-bar-track"><div class="model-bar-fill" style="width:${pct}%;background:var(--cool);opacity:0.5"></div></div>
+      <div class="model-pct">${pct}%</div>
+    </div>`;
+  }
+  h += `</div></div>`;
+
+  // ── FOOTER ──
+  h += `<div class="footer">
+    Data from Vana · ${fmt(now)}, ${now.getFullYear()}
   </div>`;
 
-  document.getElementById('out').innerHTML = html;
-  document.getElementById('footer').textContent = `Data from Vana · Generated ${now.toLocaleDateString('en-US', {month:'long', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit'})}`;
-
-  // Draw donut
-  drawDonut(sortedThemes, themeColors);
-}
-
-function drawDonut(themes, colors) {
-  const canvas = document.getElementById('donut');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const W = canvas.width, H = canvas.height;
-  const cx = W/2, cy = H/2, R = 65, r = 40;
-  const total = themes.reduce((a,[,n]) => a+n, 0);
-
-  let angle = -Math.PI/2;
-  for (const [label, count] of themes) {
-    const sweep = (count/total) * Math.PI * 2;
-    const color = colors[label] || '#555';
-
-    ctx.beginPath();
-    ctx.arc(cx, cy, R, angle, angle + sweep);
-    ctx.arc(cx, cy, r, angle + sweep, angle, true);
-    ctx.closePath();
-    ctx.fillStyle = color;
-    ctx.globalAlpha = 0.7;
-    ctx.fill();
-
-    // Glow on largest
-    if (count === themes[0][1]) {
-      ctx.globalAlpha = 0.15;
-      ctx.beginPath();
-      ctx.arc(cx, cy, R + 8, angle, angle + sweep);
-      ctx.arc(cx, cy, r - 4, angle + sweep, angle, true);
-      ctx.closePath();
-      ctx.fill();
-    }
-
-    ctx.globalAlpha = 1;
-    angle += sweep;
-  }
-
-  // Center text
-  ctx.fillStyle = 'rgba(255,255,255,0.6)';
-  ctx.font = '800 24px Inter, system-ui';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillText(total, cx, cy - 6);
-  ctx.fillStyle = 'rgba(255,255,255,0.2)';
-  ctx.font = '500 10px Inter, system-ui';
-  ctx.fillText('topics', cx, cy + 12);
+  document.getElementById('page').innerHTML = h;
 }
 
 function fmtH(h) { return h===0?'12am':h<12?h+'am':h===12?'12pm':(h-12)+'pm'; }
